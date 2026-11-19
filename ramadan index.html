@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title>ديكور رمضان</title>
+  <style>
+    body { text-align: center; background: #fff8ee; }
+    h1 { font-size: 30px; }
+    img { width: 200px; margin: 8px; border-radius: 12px; }
+  </style>
+</head>
+<body>
+  <h1>ديكور رمضان</h1>
+  <p>كل صور الديكور هنا</p>
+  <div id="gallery"></div>
+
+  <script>
+    for (let i = 1; i <= 120; i++) {
+      let img = document.createElement("img");
+      img.src = i + ".jpg";
+      document.getElementById("gallery").appendChild(img);
+    }
+  </script>
+</body>
+</html>
