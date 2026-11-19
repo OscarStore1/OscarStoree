@@ -13,11 +13,17 @@
   <div id="gallery"></div>
 
   <script>
-    for (let i = 1; i <= 120; i++) {
-      let img = document.createElement("img");
-      img.src = i + ".jpg";
-      document.getElementById("gallery").appendChild(img);
-    }
+    fetch("https://api.github.com/repos/oa4172724-del/OscarStoree/contents/")
+      .then(r => r.json())
+      .then(files => {
+        files.forEach(f => {
+          if (f.name.toLowerCase().endsWith(".jpg")  f.name.toLowerCase().endsWith(".jpeg")  f.name.toLowerCase().endsWith(".png")) {
+            let img = document.createElement("img");
+            img.src = f.name;
+            document.getElementById("gallery").appendChild(img);
+          }
+        });
+      });
   </script>
 </body>
 </html>
