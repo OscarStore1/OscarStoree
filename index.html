@@ -698,30 +698,6 @@ fetch("https://api.github.com/repos/OscarStore1/OscarStoree/git/trees/main?recur
     let name = path.replace(".JPG","").replace(".jpg","").replace(".PNG","").replace(".png","");
     newProducts.push({ id: "auto_"+name, name: "منتج رمضان - " + name, sub: "فوانيس", image: path, desc: "منتج جديد من تشكيلة رمضان - اسأل عن السعر في المحل.", badge: "جديد" });
   });
-  newProducts.reverse();
-  storeData[4].products = [...storeData[4].products, ...newProducts];
-  if(typeof currentPage !== 'undefined' && currentPage === 4) renderProducts();
-}).catch(e=>console.log(e));   
-   // --- رنرات أوتوماتيك - صور الواتساب بس ---
-const existingMac = new Set(storeData[3].products.map(p => p.image));
-fetch("https://api.github.com/repos/OscarStore1/OscarStoree/git/trees/main?recursive=1&t="+Date.now())
-.then(r=>r.json()).then(d=>{
-  let newMac = [];
-  let n = 1;
-  d.tree.forEach(f=>{
-    let path = f.path;
-    let low = path.toLowerCase();
-    if(!low.includes("whatsapp")) return;
-    if(!low.endsWith(".jpg") && !low.endsWith(".png") && !low.endsWith(".jpeg")) return;
-    if(existingMac.has(path)) return;
-    // رابط خام عشان المسافات والأقواس
-    let imgUrl = "https://raw.githubusercontent.com/OscarStore1/OscarStoree/main/" + path.split("/").map(s=>encodeURIComponent(s)).join("/");
-    newMac.push({ id: "runner_"+n, name: "رنر " + n, sub: "مفارش وكوشنز", image: imgUrl, desc: "رنر مكرمية شغل يدوي من أوسكار ستور - خيوط قطن طبيعي.", badge: "شغل يدوي" });
-    n++;
-  });
-  storeData[3].products = [...storeData[3].products, ...newMac];
-  if(typeof currentPage !== 'undefined' && currentPage === 3) renderProducts();
-});
         let currentPage = 4;
         let currentSubCategory = "الكل";
         let searchQuery = "";
