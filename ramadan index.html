@@ -5,27 +5,40 @@
 <style>
 body { text-align: center; background: #fff8ee; }
 img { width: 200px; margin: 8px; border-radius: 12px; }
+button { padding: 15px 30px; font-size: 20px; margin: 20px; background: #ff8c00; color: white; border: none; border-radius: 10px; }
+#count { font-size: 20px; font-weight: bold; }
 </style>
 </head>
 <body>
 <h1>Ramadan Decor</h1>
-<p>All Photos Here</p>
+<div id="count">جاري التحميل...</div>
 <div id="gallery"></div>
+<button id="more" onclick="showMore()">عرض المزيد</button>
 
 <script>
+let all = [];
+let shown = 0;
 fetch("https://api.github.com/repos/oa4172724-del/OscarStoree/git/trees/main?recursive=1&t=" + Date.now())
 .then(r => r.json())
 .then(data => {
-  data.tree.forEach(f => {
-    let name = f.path.toLowerCase();
-    if (name.endsWith(".jpg")  name.endsWith(".jpeg")  name.endsWith(".png") || name.endsWith(".webp")) {
-      let img = document.createElement("img");
-      img.src = "https://raw.githubusercontent.com/oa4172724-del/OscarStoree/main/" + encodeURIComponent(f.path);
-      img.loading = "lazy";
-      document.getElementById("gallery").appendChild(img);
-    }
+  all = data.tree.filter(f => {
+    let n = f.path.toLowerCase();
+    return n.endsWith(".jpg")  n.endsWith(".jpeg")  n.endsWith(".png");
   });
+  // اقلب الترتيب - الجديد الأول
+  all.reverse();
+  document.getElementById("count").innerText = "عندنا " + all.length + " صورة - الجديد فوق";
+  showMore();
 });
+function showMore(){
+  for(let i=0; i<50 && shown < all.length; i++, shown++){
+    let img = document.createElement("img");
+    img.src = "https://raw.githubusercontent.com/oa4172724-del/OscarStoree/main/" + encodeURIComponent(all[shown].path);
+    img.loading = "lazy";
+    document.getElementById("gallery").appendChild(img);
+  }
+  if(shown >= all.length) document.getElementById("more").style.display = "none";
+}
 </script>
 </body>
 </html>
