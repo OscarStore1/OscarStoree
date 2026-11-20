@@ -1,10 +1,10 @@
 <html><head><meta charset="utf-8"><title>Ramadan</title>
-<style>body{text-align:center;background:#fff8ee}img{width:200px;margin:8px;border-radius:12px}button{padding:15px 30px;font-size:20px;margin:20px;background:#ff8c00;color:white;border:none;border-radius:10px}</style>
+<style>body{text-align:center;background:#fff8ee}div.box{display:inline-block;margin:8px}img{width:200px;border-radius:12px;display:block}span{font-size:12px}button{padding:15px 30px;font-size:20px;margin:20px;background:#ff8c00;color:white;border:none;border-radius:10px}</style>
 </head><body>
 <h1>Ramadan Decor</h1>
 <div id="count"></div>
 <div id="gallery"></div>
-<button id="more" onclick="showMore()">عرض المزيد</button>
+<button id="more" onclick="showMore()">عرض المزيد - 10 صور</button>
 <script>
 let all=[]; let shown=0;
 fetch("https://api.github.com/repos/OscarStore1/OscarStoree/git/trees/main?recursive=1&t="+Date.now())
@@ -15,11 +15,14 @@ fetch("https://api.github.com/repos/OscarStore1/OscarStoree/git/trees/main?recur
   showMore();
 });
 function showMore(){
-  for(let i=0;i<50 && shown<all.length;i++,shown++){
+  for(let i=0;i<10 && shown<all.length;i++,shown++){
+    let box=document.createElement("div"); box.className="box";
     let img=document.createElement("img");
     img.src="https://oscarstore1.github.io/OscarStoree/"+all[shown].path;
     img.loading="lazy";
-    document.getElementById("gallery").appendChild(img);
+    let sp=document.createElement("span"); sp.innerText=all[shown].path;
+    box.appendChild(img); box.appendChild(sp);
+    document.getElementById("gallery").appendChild(box);
   }
   if(shown>=all.length) document.getElementById("more").style.display="none";
 }
