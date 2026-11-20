@@ -702,6 +702,26 @@ fetch("https://api.github.com/repos/OscarStore1/OscarStoree/git/trees/main?recur
   storeData[4].products = [...storeData[4].products, ...newProducts];
   if(typeof currentPage !== 'undefined' && currentPage === 4) renderProducts();
 }).catch(e=>console.log(e));   
+        // --- مكرميات ورنرات وكوشنات أوتوماتيك ---
+const existingMac = new Set(storeData[3].products.map(p => p.image));
+fetch("https://api.github.com/repos/OscarStore1/OscarStoree/git/trees/main?recursive=1&t="+Date.now())
+.then(r=>r.json()).then(d=>{
+  let newMac = [];
+  d.tree.forEach(f=>{
+    let path = f.path.toLowerCase();
+    if(!path.endsWith(".jpg") && !path.endsWith(".png")) return;
+    if(existingMac.has(f.path)) return;
+    let sub = "";
+    if(path.includes("runner")) sub = "مفارش وكوشنز";
+    else if(path.includes("cushion")) sub = "مفارش وكوشنز";
+    else if(path.includes("mac")) sub = "معلقات حائط";
+    else return;
+    let name = f.path.replace(".JPG","").replace(".jpg","").replace(".png","");
+    newMac.push({ id: "mac_"+name, name: name.replace("mac-","").replace("runner-","رنر ").replace("cushion-","كوشن "), sub: sub, image: f.path, desc: "شغل يدوي من أوسكار ستور - خيوط قطن طبيعي.", badge: "شغل يدوي" });
+  });
+  storeData[3].products = [...storeData[3].products, ...newMac];
+  if(typeof currentPage !== 'undefined' && currentPage === 3) renderProducts();
+});
         let currentPage = 4;
         let currentSubCategory = "الكل";
         let searchQuery = "";
