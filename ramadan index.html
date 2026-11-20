@@ -14,7 +14,7 @@ img { width: 200px; margin: 8px; border-radius: 12px; }
 <div id="gallery"></div>
 
 <script>
-fetch("https://api.github.com/repos/oa4172724-del/OscarStoree/contents/?t=" + Date.now(), { cache: "no-store" })
+fetch("https://api.github.com/repos/oa4172724-del/OscarStoree/contents/?per_page=1000&t=" + Date.now(), { cache: "no-store" })
 .then(r => r.json())
 .then(files => {
 files.forEach(f => {
