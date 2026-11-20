@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
+
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -76,8 +76,8 @@
                 <i class="fa-solid fa-location-dot text-red-700 animate-bounce"></i>
                 <span>عنوان المحل: بورسعيد : سعد زغلول والمغرب (الثلاثيني ثالث شارع بعد محمد علي)</span>
             </div>
-            <a href="https://www.bing.com/maps/default.aspx?v=2&pc=FACEBK&mid=8100&where1=31.27197%2C%2032.28541&FORM=FBKPL1&name=%D8%A8%D9%88%D8%B1%D8%B3%D8%B9%D9%8A%D8%AF%20%3A%D8%B3%D8%B9%D8%AF%20%D8%B2%D8%BA%D9%84%D9%88%D9%84%20%D9%88%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8%20(%D8%A7%D9%84%D8%AB%D9%84%25D8%A7%D8%AB%D9%8A%D9%86%D9%8A%20%D8%AB%25D8%A7%D9%84%D8%AB%20%D8%B4%25D8%A7%D8%B1%D8%B9%20%D8%A8%D8%B9%D8%AF%20%D9%85%D8%AD%D9%85%D8%AF%20%D8%B9%D9%84%D9%8A)%2C%20Port%20Said%2C%20Egypt" 
-               target="_blank" 
+            <a href="https://www.bing.com/maps/default.aspx?v=2&pc=FACEBK&mid=8100&where1=31.27197%2C%2032.28541&FORM=FBKPL1&name=%D8%A8%D9%88%D8%B1%D8%B3%D8%B9%D9%8A%D8%AF%20%3A%D8%B3%D8%B9%D8%AF%20%D8%B2%D8%BA%D9%84%D9%88%D9%84%20%D9%88%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8%20(%D8%A7%D9%84%D8%AB%D9%84%25D8%A7%D8%AB%D9%8A%D9%86%D9%8A%20%D8%AB%25D8%A7%D9%84%D8%AB%20%D8%B4%25D8%A7%D8%B1%D8%B9%20%D8%A8%D8%B9%D8%AF%20%D9%85%D8%AD%D9%85%D8%AF%20%D8%B9%D9%84%D9%8A)%2C%20Port%20Said%2C%20Egypt"
+               target="_blank"
                rel="noopener noreferrer"
                class="inline-flex items-center gap-1.5 bg-black text-oscar-gold px-3 py-1 rounded-full text-xs hover:bg-stone-800 transition shadow">
                 <i class="fa-solid fa-map-location-dot"></i>
@@ -92,8 +92,8 @@
             <!-- Logo Brand -->
             <div class="flex items-center gap-3 cursor-pointer" onclick="switchPage(4)">
                 <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-black border border-oscar-gold/50 overflow-hidden flex items-center justify-center shadow-lg">
-                    <img src="590806631_1245380927609709_5438591374146567451_n.jpg" 
-                         alt="OSCAR STORE Logo" 
+                    <img src="590806631_1245380927609709_5438591374146567451_n.jpg"
+                         alt="OSCAR STORE Logo"
                          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
                          class="w-full h-full object-contain p-1">
                     <div style="display:none;" class="w-full h-full bg-black flex flex-col items-center justify-center p-1 text-oscar-gold font-black tracking-tighter leading-none">
@@ -109,8 +109,8 @@
 
             <!-- Search Bar (Desktop) -->
             <div class="hidden md:flex flex-1 max-w-md relative">
-                <input type="text" id="searchInput" oninput="handleSearch(this.value)" 
-                       placeholder="ابحث عن منتج (فانوس، مبخرة، هلال، شيالة، مج...)" 
+                <input type="text" id="searchInput" oninput="handleSearch(this.value)"
+                       placeholder="ابحث عن منتج (فانوس، رنر، مبخرة، هلال، شيالة، مج...)"
                        class="w-full bg-stone-100 dark:bg-oscar-cardDark border border-stone-300 dark:border-oscar-borderDark rounded-2xl py-2.5 pr-10 pl-4 text-sm focus:outline-none focus:border-oscar-gold transition">
                 <i class="fa-solid fa-magnifying-glass absolute right-3.5 top-3.5 text-stone-400"></i>
             </div>
@@ -122,7 +122,7 @@
                     <i id="themeIcon" class="fa-solid fa-sun text-lg"></i>
                 </button>
 
-                <button onclick="toggleCart(true)" 
+                <button onclick="toggleCart(true)"
                         class="relative flex items-center gap-2 bg-oscar-gold hover:bg-oscar-goldHover text-black font-extrabold px-4 py-3 rounded-2xl shadow-lg hover:scale-105 transition">
                     <i class="fa-solid fa-bag-shopping text-lg"></i>
                     <span class="hidden sm:inline">سلة المشتريات</span>
@@ -134,14 +134,14 @@
         <!-- Mobile Search -->
         <div class="md:hidden px-4 pb-3">
             <div class="relative">
-                <input type="text" id="mobileSearchInput" oninput="handleSearch(this.value)" 
-                       placeholder="ابحث في أوسكار ستور..." 
+                <input type="text" id="mobileSearchInput" oninput="handleSearch(this.value)"
+                       placeholder="ابحث في أوسكار ستور..."
                        class="w-full bg-stone-100 dark:bg-oscar-cardDark border border-stone-300 dark:border-oscar-borderDark rounded-xl py-2 pr-9 pl-4 text-sm focus:outline-none focus:border-oscar-gold">
                 <i class="fa-solid fa-magnifying-glass absolute right-3 top-2.5 text-stone-400 text-sm"></i>
             </div>
         </div>
 
-        <!-- 5 Pages Navigation Tabs -->
+        <!-- 6 Pages Navigation Tabs -->
         <nav class="bg-stone-50 dark:bg-[#0b0b0b] border-t border-stone-200 dark:border-oscar-borderDark">
             <div class="max-w-7xl mx-auto px-2 sm:px-4">
                 <div id="navTabs" class="flex items-center justify-start md:justify-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar py-2.5">
@@ -157,6 +157,10 @@
                     <button onclick="switchPage(2)" data-page="2" class="nav-btn whitespace-nowrap px-4 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 transition">
                         <i class="fa-solid fa-couch"></i>
                         <span>ديكور الانتريه</span>
+                    </button>
+                    <button onclick="switchPage(6)" data-page="6" class="nav-btn whitespace-nowrap px-4 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 transition">
+                        <i class="fa-solid fa-rug"></i>
+                        <span>الرنارات</span>
                     </button>
                     <button onclick="switchPage(3)" data-page="3" class="nav-btn whitespace-nowrap px-4 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 transition">
                         <i class="fa-brands fa-pagelines"></i>
@@ -175,8 +179,8 @@
     <!-- Hero Section with Storefront Image -->
     <section class="relative bg-black text-white overflow-hidden border-b border-oscar-borderDark">
         <div class="absolute inset-0 opacity-35 pointer-events-none">
-            <img src="watermarked_img_1725649061395340463.jpg" 
-                 alt="واجهة أوسكار ستور" 
+            <img src="watermarked_img_1725649061395340463.jpg"
+                 alt="واجهة أوسكار ستور"
                  onerror="this.style.display='none'"
                  class="w-full h-full object-cover object-center">
         </div>
@@ -192,15 +196,15 @@
                     OSCAR STORE
                 </h2>
                 <p class="text-stone-200 text-sm sm:text-base leading-relaxed mb-5">
-                    أحدث تشكيلة فوانيس، مباخر، هلال رمضان المضيء، وشيالات الضيافة الفاخرة متوفرة الآن في فرع أوسكار ستور ببورسعيد. اختر القطع المناسبة وأضفها للسلة لطلبها فوراً.
+                    أحدث تشكيلة فوانيس، مباخر، رنارات، هلال رمضان المضيء، وشيالات الضيافة الفاخرة متوفرة الآن في فرع أوسكار ستور ببورسعيد. اختر القطع المناسبة وأضفها للسلة لطلبها فوراً.
                 </p>
                 <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3">
-                    <button onclick="document.getElementById('mainStoreContent').scrollIntoView({behavior:'smooth'})" 
+                    <button onclick="document.getElementById('mainStoreContent').scrollIntoView({behavior:'smooth'})"
                             class="bg-oscar-gold hover:bg-oscar-goldHover text-black font-black px-6 py-3 rounded-2xl shadow-lg transition flex items-center gap-2">
-                        <span>تصفح تشكيلة رمضان</span>
+                        <span>تصفح تشكيلة المتجر</span>
                         <i class="fa-solid fa-arrow-down"></i>
                     </button>
-                    <button onclick="toggleCart(true)" 
+                    <button onclick="toggleCart(true)"
                             class="bg-white/10 hover:bg-white/20 border border-oscar-gold/40 text-oscar-gold font-bold px-6 py-3 rounded-2xl transition flex items-center gap-2">
                         <i class="fa-solid fa-bag-shopping"></i>
                         <span>سلة الطلبات</span>
@@ -226,8 +230,8 @@
                     <i class="fa-solid fa-map-pin text-oscar-gold ml-1"></i>
                     بورسعيد : سعد زغلول والمغرب (الثلاثيني ثالث شارع بعد محمد علي)
                 </p>
-                <a href="https://www.bing.com/maps/default.aspx?v=2&pc=FACEBK&mid=8100&where1=31.27197%2C%2032.28541&FORM=FBKPL1&name=%D8%A8%D9%88%D8%B1%D8%B3%D8%B9%D9%8A%D8%AF%20%3A%D8%B3%D8%B9%D8%AF%20%D8%B2%D8%BA%D9%84%D9%88%D9%84%20%D9%88%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8%20(%D8%A7%D9%84%D8%AB%D9%84%25D8%A7%D8%AB%D9%8A%D9%86%D9%8A%20%D8%AB%25D8%A7%D9%84%D8%AB%20%D8%B4%25D8%A7%D8%B1%D8%B9%20%D8%A8%D8%B9%D8%AF%20%D9%85%D8%AD%D9%85%D8%AF%20%D8%B9%D9%84%D9%8A)%2C%20Port%20Said%2C%20Egypt" 
-                   target="_blank" 
+                <a href="https://www.bing.com/maps/default.aspx?v=2&pc=FACEBK&mid=8100&where1=31.27197%2C%2032.28541&FORM=FBKPL1&name=%D8%A8%D9%88%D8%B1%D8%B3%D8%B9%D9%8A%D8%AF%20%3A%D8%B3%D8%B9%D8%AF%20%D8%B2%D8%BA%D9%84%D9%88%D9%84%20%D9%88%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8%20(%D8%A7%D9%84%D8%AB%D9%84%25D8%A7%D8%AB%D9%8A%D9%86%D9%8A%20%D8%AB%25D8%A7%D9%84%D8%AB%20%D8%B4%25D8%A7%D8%B1%D8%B9%20%D8%A8%D8%B9%D8%AF%20%D9%85%D8%AD%D9%85%D8%AF%20%D8%B9%D9%84%D9%8A)%2C%20Port%20Said%2C%20Egypt"
+                   target="_blank"
                    rel="noopener noreferrer"
                    class="w-full bg-oscar-gold hover:bg-oscar-goldHover text-black font-black py-3 px-4 rounded-2xl flex items-center justify-center gap-2 transition shadow-md">
                     <i class="fa-solid fa-diamond-turn-right text-lg"></i>
@@ -261,7 +265,7 @@
                     <p class="text-sm text-stone-600 dark:text-stone-300 mt-1">يمكنك استعراض تشكيلة اللانش بوكسات والأقلام والزمزميات القادمة أو الحجز المسبق وتفعيل إشعار التذكير.</p>
                 </div>
             </div>
-            <button onclick="showToast('تم تفعيل تذكير افتتاح قسم الأدوات المدرسية بنجاح!')" 
+            <button onclick="showToast('تم تفعيل تذكير افتتاح قسم الأدوات المدرسية بنجاح!')"
                     class="whitespace-nowrap bg-oscar-gold hover:bg-oscar-goldHover text-black font-black px-5 py-3 rounded-2xl shadow transition flex items-center gap-2">
                 <i class="fa-solid fa-bell"></i>
                 <span>ذكرني عند الافتتاح</span>
@@ -283,7 +287,7 @@
                     <h4 class="text-xl font-black text-stone-900 dark:text-oscar-gold">OSCAR STORE</h4>
                 </div>
                 <p class="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
-                    وجهتك الأولى للأدوات المنزلية، ديكورات الانتريه، المكرميات، وزينة رمضان في بورسعيد. جودة عالية وتشكيلة متجددة.
+                    وجهتك الأولى للأدوات المنزلية، ديكورات الانتريه، الرنارات، المكرميات، وزينة رمضان في بورسعيد. جودة عالية وتشكيلة متجددة.
                 </p>
             </div>
 
@@ -293,6 +297,7 @@
                     <li><button onclick="switchPage(4)" class="hover:text-oscar-gold transition">• ديكورات رمضان والأنوار</button></li>
                     <li><button onclick="switchPage(1)" class="hover:text-oscar-gold transition">• أدوات المطبخ</button></li>
                     <li><button onclick="switchPage(2)" class="hover:text-oscar-gold transition">• ديكور الانتريه</button></li>
+                    <li><button onclick="switchPage(6)" class="hover:text-oscar-gold transition">• الرنارات</button></li>
                     <li><button onclick="switchPage(3)" class="hover:text-oscar-gold transition">• المكرميات</button></li>
                     <li><button onclick="switchPage(5)" class="hover:text-oscar-gold transition">• الأدوات المدرسية (تُفتح قبل المدارس بشهر)</button></li>
                 </ul>
@@ -304,8 +309,8 @@
                     <i class="fa-solid fa-location-dot text-oscar-gold ml-1"></i>
                     بورسعيد : سعد زغلول والمغرب (الثلاثيني ثالث شارع بعد محمد علي)
                 </p>
-                <a href="https://www.bing.com/maps/default.aspx?v=2&pc=FACEBK&mid=8100&where1=31.27197%2C%2032.28541&FORM=FBKPL1&name=%D8%A8%D9%88%D8%B1%D8%B3%D8%B9%D9%8A%D8%AF%20%3A%D8%B3%D8%B9%D8%AF%20%D8%B2%D8%BA%D9%84%D9%88%D9%84%20%D9%88%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8%20(%D8%A7%D9%84%D8%AB%D9%84%25D8%A7%D8%AB%D9%8A%D9%86%D9%8A%20%D8%AB%25D8%A7%D9%84%D8%AB%20%D8%B4%25D8%A7%D8%B1%D8%B9%20%D8%A8%D8%B9%D8%AF%20%D9%85%D8%AD%D9%85%D8%AF%20%D8%B9%D9%84%D9%8A)%2C%20Port%20Said%2C%20Egypt" 
-                   target="_blank" 
+                <a href="https://www.bing.com/maps/default.aspx?v=2&pc=FACEBK&mid=8100&where1=31.27197%2C%2032.28541&FORM=FBKPL1&name=%D8%A8%D9%88%D8%B1%D8%B3%D8%B9%D9%8A%D8%AF%20%3A%D8%B3%D8%B9%D8%AF%20%D8%B2%D8%BA%D9%84%D9%88%D9%84%20%D9%88%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8%20(%D8%A7%D9%84%D8%AB%D9%84%25D8%A7%D8%AB%D9%8A%D9%86%D9%8A%20%D8%AB%25D8%A7%D9%84%D8%AB%20%D8%B4%25D8%A7%D8%B1%D8%B9%20%D8%A8%D8%B9%D8%AF%20%D9%85%D8%AD%D9%85%D8%AF%20%D8%B9%D9%84%D9%8A)%2C%20Port%20Said%2C%20Egypt"
+                   target="_blank"
                    rel="noopener noreferrer"
                    class="inline-flex items-center gap-2 text-xs font-bold bg-oscar-gold text-black px-4 py-2 rounded-xl hover:bg-oscar-goldHover transition mb-4">
                     <i class="fa-solid fa-map"></i>
@@ -384,7 +389,7 @@
                 <div id="storePickupInfo" class="hidden bg-oscar-gold/10 border border-oscar-gold/40 rounded-2xl p-3 text-xs space-y-1.5">
                     <p class="font-bold text-stone-900 dark:text-oscar-gold">عنوان الاستلام من أوسكار ستور:</p>
                     <p class="text-stone-600 dark:text-stone-300">بورسعيد : سعد زغلول والمغرب (الثلاثيني ثالث شارع بعد محمد علي)</p>
-                    <a href="https://www.bing.com/maps/default.aspx?v=2&pc=FACEBK&mid=8100&where1=31.27197%2C%2032.28541&FORM=FBKPL1&name=%D8%A8%D9%88%D8%B1%D8%B3%D8%B9%D9%8A%D8%AF%20%3A%D8%B3%D8%B9%D8%AF%20%D8%B2%D8%BA%D9%84%D9%88%D9%84%20%D9%88%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8%20(%D8%A7%D9%84%D8%AB%D9%84%25D8%A7%D8%AB%D9%8A%D9%86%D9%8A%20%D8%AB%25D8%A7%D9%84%D8%AB%20%D8%B4%25D8%A7%D8%B1%D8%B9%20%D8%A8%D8%B9%D8%AF%20%D9%85%D8%AD%D9%85%D8%AF%20%D8%B9%D9%84%D9%8A)%2C%20Port%20Said%2C%20Egypt" 
+                    <a href="https://www.bing.com/maps/default.aspx?v=2&pc=FACEBK&mid=8100&where1=31.27197%2C%2032.28541&FORM=FBKPL1&name=%D8%A8%D9%88%D8%B1%D8%B3%D8%B9%D9%8A%D8%AF%20%3A%D8%B3%D8%B9%D8%AF%20%D8%B2%D8%BA%D9%84%D9%88%D9%84%20%D9%88%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8%20(%D8%A7%D9%84%D8%AB%D9%84%25D8%A7%D8%AB%D9%8A%D9%86%D9%8A%20%D8%AB%25D8%A7%D9%84%D8%AB%20%D8%B4%25D8%A7%D8%B1%D8%B9%20%D8%A8%D8%B9%D8%AF%20%D9%85%D8%AD%D9%85%D8%AF%20%D8%B9%D9%84%D9%8A)%2C%20Port%20Said%2C%20Egypt"
                        target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-oscar-goldDark dark:text-oscar-gold underline font-bold">
                         <i class="fa-solid fa-location-arrow"></i> فتح الخريطة
                     </a>
@@ -432,7 +437,7 @@
             </div>
             <h3 class="text-2xl font-black text-stone-900 dark:text-oscar-gold mb-2">تم استلام طلبك بنجاح!</h3>
             <p class="text-sm text-stone-600 dark:text-stone-300 mb-4">شكراً لتسوقك من <span class="font-bold">OSCAR STORE</span>. إليك ملخص طلبك:</p>
-            
+
             <div id="orderSummaryDetails" class="bg-stone-100 dark:bg-black rounded-2xl p-4 text-right text-xs space-y-2 border border-stone-200 dark:border-oscar-borderDark mb-5 max-h-72 overflow-y-auto"></div>
 
             <button onclick="closeOrderModal()" class="w-full bg-oscar-gold hover:bg-oscar-goldHover text-black font-black py-3 rounded-2xl transition">
@@ -455,473 +460,277 @@
             <button onclick="closeImageModal()" class="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-oscar-gold text-black font-black flex items-center justify-center shadow-lg hover:scale-105 transition">
                 <i class="fa-solid fa-xmark text-lg"></i>
             </button>
-            <img id="modalImgSrc" src="" alt="" class="w-full max-h-[75vh] object-contain rounded-2xl bg-white">
-            <p id="modalImgCaption" class="text-center text-oscar-gold font-black text-base mt-3 pb-1"></p>
+            <img id="modalImageSrc" src="" alt="معاينة المنتج" class="w-full max-h-[75vh] object-contain rounded-2xl">
+            <p id="modalImageCaption" class="text-center text-oscar-gold font-bold text-sm mt-3"></p>
         </div>
     </div>
 
-    <!-- JavaScript Logic & Store Data -->
     <script>
-        const storeData = {
+        const pagesMeta = {
             4: {
-                badge: "تشكيلة رمضان المميزة",
-                title: "ديكورات رمضان والأنوار",
-                subtitle: "أجواء رمضانية ساحرة وإضاءات دافئة تملأ البيت بهجة (اضغط على أي صورة لتكبيرها)",
-                subCategories: ["الكل", "فوانيس", "مباخر", "بونبونيرة وضيافة", "هلال وتحف مضيئة"],
-                products: [
-                    {
-                        id: "ramadan_1",
-                        name: "فانوس معدن ذهبي مفرغ بإضاءة (26 سم)",
-                        sub: "فوانيس",
-                        image: "AGMH1100.JPG",
-                        desc: "فانوس معدني ذهبي فاخر بنقوش إسلامية مفرغة وهلال علوي، ارتفاع 26 سم × عرض 12 سم (كود 30-524).",
-                        badge: "الأكثر مبيعاً"
-                    },
-                    {
-                        id: "ramadan_2",
-                        name: "مبخرة معدن ذهبي رمضان كريم (18 سم)",
-                        sub: "مباخر",
-                        image: "AIWD1334.JPG",
-                        desc: "مبخرة ذهبية أنيقة محفور عليها عبارة رمضان كريم مع قبة هلال، ارتفاع 18 سم × قاعدة 9 سم (كود 525).",
-                        badge: "جديد"
-                    },
-                    {
-                        id: "ramadan_3",
-                        name: "بونبونيرة ضيافة مزدوجة - شرفتونا (أبيض × ذهبي)",
-                        sub: "بونبونيرة وضيافة",
-                        image: "AJCK1627.JPG",
-                        desc: "طقم ضيافة راقي بقاعدة خشبية مكتوب عليها شرفتونا مع خلفية مسجد و2 قبة بيضاء بلمسة ذهبية، مقاس 37×24 سم (كود 492).",
-                        badge: "مميز"
-                    },
-                    {
-                        id: "ramadan_4",
-                        name: "فانوس عمودي كبير زجاج ملون (180 سم)",
-                        sub: "فوانيس",
-                        image: "APZW6315.JPG",
-                        desc: "فانوس أرضي ضخم بارتفاع 180 سم × عرض 40 سم بزجاج ملون ونقوش أرابيسك مضيئة للمداخل والريسبشن (كود 10-18060).",
-                        badge: "حجم كبير"
-                    },
-                    {
-                        id: "ramadan_5",
-                        name: "شيالة تقديم دورين معدن ذهبي مزخرف",
-                        sub: "بونبونيرة وضيافة",
-                        image: "ARBN8488.JPG",
-                        desc: "شيالة كحك وحلويات دورين بطلاء ذهبي لامع ومقبض علوي مزين بالورود، ارتفاع 42 سم وأقطار 30 و25 سم (كود 50-4242H).",
-                        badge: "فاخر"
-                    },
-                    {
-                        id: "ramadan_6",
-                        name: "بونبونيرة ضيافة ثلاثية - شرفتونا (أحمر × ذهبي)",
-                        sub: "بونبونيرة وضيافة",
-                        image: "BAQC3458.JPG",
-                        desc: "طقم ضيافة ثلاثي بقاعدة خشبية وخلفية مسجد مع 3 قباب زجاجية حمراء بلمسة ذهبية، مقاس 38×24 سم (كود 497).",
-                        badge: "الأكثر طلباً"
-                    },
-                    {
-                        id: "ramadan_7",
-                        name: "مبخرة عمودية ديكورية مضيئة (75 سم)",
-                        sub: "مباخر",
-                        image: "BAUY7777.JPG",
-                        desc: "مبخرة وفانوس ديكوري عمودي أنيق بنقوش نجوم وهلال وإضاءة داخلية دافئة، ارتفاع 75 سم × 15 سم (كود 85-083R).",
-                        badge: "مميز"
-                    },
-                    {
-                        id: "ramadan_8",
-                        name: "فانوس معدن ذهبي كلاسيك بزجاج ملون (18 سم)",
-                        sub: "فوانيس",
-                        image: "BPEV4029.JPG",
-                        desc: "فانوس رمضاني مبهج بإطار ذهبي وزجاج ملون (أخضر / أزرق / أحمر) وإضاءة شمعة داخلية، ارتفاع 18 سم (كود 543).",
-                        badge: ""
-                    },
-                    {
-                        id: "ramadan_9",
-                        name: "ستاند ديكور رمضان ذهبي وكريستال (هلال / نجمة / قبة)",
-                        sub: "هلال وتحف مضيئة",
-                        image: "CBPU0207.JPG",
-                        desc: "تحفة ديكورية أنيقة لرمضان متوفرة بـ 3 أشكال (هلال كريستال، قبة ذهبية، نجمة كريستال) بارتفاع 33-36 سم (كود 35-3633).",
-                        badge: "تشكيلة"
-                    },
-                    {
-                        id: "ramadan_10",
-                        name: "هلال رمضان كبير أرابيسك مع فانوس معلق (110 سم)",
-                        sub: "هلال وتحف مضيئة",
-                        image: "CGWT1380.JPG",
-                        desc: "هلال ديكوري ضخم مفرغ بنقوش أرابيسك يتوسطه فانوس زجاج ملون مضيء، ارتفاع 110 سم × عرض 85 سم (كود 20-649).",
-                        badge: "الأكثر تميزاً"
-                    },
-                    {
-                        id: "ramadan_11",
-                        name: "فانوس معدن ذهبي زجاج ملون وإضاءة (21 سم)",
-                        sub: "فوانيس",
-                        image: "AIJX6513.JPG",
-                        desc: "فانوس ذهبي أنيق بهلال علوي وزجاج ملون (أحمر وأزرق، أبيض، أخضر وأزرق) مع إضاءة داخلية، ارتفاع 21 سم × عرض 12 سم (كود 30-2112).",
-                        badge: "جديد"
-                    },
-                    {
-                        id: "ramadan_12",
-                        name: "طقم صواني تقديم مراية بإطار ذهبي مزخرف",
-                        sub: "بونبونيرة وضيافة",
-                        image: "ALXR5516.JPG",
-                        desc: "طقم صواني تقديم مراية بمقابض وإطار ذهبي مفرغ بنقوش هلال، مقاسات متعددة 26×7 و31×7 و35×7 سم (كود 40-532H).",
-                        badge: "مميز"
-                    },
-                    {
-                        id: "ramadan_13",
-                        name: "فانوس أسطواني ذهبي بشخصيات رمضان وإضاءة (26 سم)",
-                        sub: "فوانيس",
-                        image: "AMOK5900.JPG",
-                        desc: "فانوس زجاج أسطواني بقاعدة وغطاء ذهبي وهلال يتضمن مجسمات رمضانية وفروع إضاءة دافئة، ارتفاع 26 سم × 11 سم (كود 20-2611).",
-                        badge: "الأكثر طلباً"
-                    },
-                    {
-                        id: "ramadan_14",
-                        name: "فانوس مفرغ ذهبي وأوف وايت بلمبة إضاءة (33 سم)",
-                        sub: "فوانيس",
-                        image: "AOWQ0823.JPG",
-                        desc: "فانوس بتصميم إسلامي مفرغ وهلال رمضاني يتوفر بلون ذهبي وأوف وايت مع إضاءة داخلية، ارتفاع 33 سم × 12 سم (كود 20-2001).",
-                        badge: "تشكيلة"
-                    },
-                    {
-                        id: "ramadan_15",
-                        name: "فانوس أرضي ذهبي كبير هلال ونجوم (58 سم)",
-                        sub: "فوانيس",
-                        image: "BPNB7808.JPG",
-                        desc: "فانوس معدني لامع بتفاصيل هلال ونجوم مفرغة وإضاءة داخلية دافئة، ارتفاع 58 سم × عرض 20 سم × قاعدة 15×15 سم (كود 998).",
-                        badge: "حجم كبير"
-                    },
-                    {
-                        id: "ramadan_16",
-                        name: "طقم بولات ضيافة أهلاً وسهلاً بقاعدة ذهبية (4 قطع)",
-                        sub: "بونبونيرة وضيافة",
-                        image: "BRGX3982.JPG",
-                        desc: "طقم ضيافة 4 بولات بألوان متنوعة (أخضر، أوف وايت، رمادي، برتقالي) مطبوع عليها أهلاً وسهلاً مع زخارف مساجد، ارتفاع 16 سم × 21 سم (كود 65-2020).",
-                        badge: "جديد"
-                    },
-                    {
-                        id: "ramadan_17",
-                        name: "فانوس معدن ذهبي زجاج أزرق وأخضر (24 سم)",
-                        sub: "فوانيس",
-                        image: "CFUF0262.JPG",
-                        desc: "فانوس ذهبي بنقوش مفرغة وزجاج أزرق وأخضر وإضاءة داخلية، ارتفاع 24 سم × عرض 9 سم (كود 15-2409).",
-                        badge: ""
-                    },
-                    {
-                        id: "ramadan_18",
-                        name: "مبخرة ذهبية بقاعدة وهلال رمضان كريم (20 سم)",
-                        sub: "مباخر",
-                        image: "CMEN3122.JPG",
-                        desc: "مبخرة معدنية ذهبية مثبتة على قاعدة مع خلفية هلال وعبارة رمضان كريم، ارتفاع 20 سم × 15 سم (كود 252).",
-                        badge: "مميز"
-                    },
-                    {
-                        id: "ramadan_19",
-                        name: "فانوس أسطواني ذهبي بإضاءة فروع رمضان (23 سم)",
-                        sub: "فوانيس",
-                        image: "COIA6114.JPG",
-                        desc: "فانوس زجاج أسطواني بقاعدة وغطاء ذهبي مع طباعة Ramadan Kareem وفروع إضاءة دافئة، ارتفاع 23 سم × 9 سم (كود 665).",
-                        badge: "الأكثر مبيعاً"
-                    },
-                    {
-                        id: "ramadan_20",
-                        name: "ستاند ضيافة ثلاثي بولات كريستال وفرع ذهبي (30 سم)",
-                        sub: "بونبونيرة وضيافة",
-                        image: "CYEP8364.JPG",
-                        desc: "ستاند ضيافة فخم بفرع معدني ذهبي مزين بالورود و3 بولات كريستال شفافة، مقاس 35×27×30 سم (كود 50-3035).",
-                        badge: "فاخر"
-                    }
-                ]
+                badge: 'تشكيلة رمضان',
+                title: 'ديكورات رمضان والأنوار',
+                subtitle: 'أجواء رمضانية ساحرة وإضاءات دافئة تملأ البيت بهجة',
+                categories: ['الكل', 'فوانيس وأنوار', 'مباخر وضيافة']
             },
             1: {
-                badge: "القسم الثاني",
-                title: "أدوات المطبخ المتكاملة",
-                subtitle: "كل ما يلزم مطبخك العصري من أدوات التحضير والتقديم والحفظ",
-                subCategories: ["الكل", "أطقم توزيع وتحضير", "مجّات وزجاجيات", "منظمات وحافظات"],
-                products: [
-                    { id: "k1", name: "طقم توزيع سيليكون 12 قطعة بيد خشب", sub: "أطقم توزيع وتحضير", desc: "مقاوم للحرارة العالية وآمن على جميع أنواع الحلل الجرانيت والتيفال.", icon: "fa-spoon", badge: "الأكثر مبيعاً" },
-                    { id: "k2", name: "مج حراري ستانلس دبل وول 500 مل", sub: "مجّات وزجاجيات", desc: "يحفظ حرارة المشروبات الساخنة والباردة لمدة تصل إلى 8 ساعات.", icon: "fa-mug-hot", badge: "جديد" },
-                    { id: "k3", name: "طقم توابل دوار زجاج 12 برطمان", sub: "منظمات وحافظات", desc: "استاند استانلس دوار 360 درجة لتنظيم التوابل بشكل أنيق.", icon: "fa-jar", badge: "مميز" },
-                    { id: "k4", name: "قطاعة خضروات متعددة الشفرات", sub: "أطقم توزيع وتحضير", desc: "تقطيع سريع وآمن للسلطة والخضروات مع مصفاة مدمجة.", icon: "fa-kitchen-set", badge: "" },
-                    { id: "k5", name: "طقم علب ثلاجة محكمة الغلق (5 قطع)", sub: "منظمات وحافظات", desc: "خامة صحية خالية من BPA قابلة للاستخدام في الميكروويف.", icon: "fa-box-archive", badge: "" },
-                    { id: "k6", name: "طقم كاسات زجاج كريستال مذهب (6 قطع)", sub: "مجّات وزجاجيات", desc: "تصميم عصري بحافة ذهبية فاخرة لتقديم العصائر والمشروبات.", icon: "fa-wine-glass", badge: "" }
-                ]
+                badge: 'قسم المطبخ',
+                title: 'أدوات المطبخ',
+                subtitle: 'مستلزمات يومية عملية وتنظيم أنيق لكل مطبخ',
+                categories: ['الكل', 'تقديم وضيافة', 'تنظيم وتخزين']
             },
             2: {
-                badge: "القسم الثالث",
-                title: "ديكور الانتريه والريسبشن",
-                subtitle: "لمسات جمالية فاخرة تضيف الدفء والأناقة لغرفة المعيشة",
-                subCategories: ["الكل", "فازات وتحف", "مباخر وصواني", "ساعات ولوحات"],
-                products: [
-                    { id: "d1", name: "فازة سيراميك مودرن أسود في ذهبي", sub: "فازات وتحف", desc: "قطعة ديكور راقية تناسب الترابيزات الجانبية والكونسول.", icon: "fa-chess-rook", badge: "الأكثر مبيعاً" },
-                    { id: "d2", name: "مبخرة معدن ذهبي بغطاء مزخرف", sub: "مباخر وصواني", desc: "تصميم شرقي عصري لتعطير المنزل بأمان وأناقة.", icon: "fa-fire-flame-curved", badge: "مميز" },
-                    { id: "d3", name: "صينية تقديم مراية بإطار ذهبي", sub: "مباخر وصواني", desc: "مثالية لتقديم الضيافة أو كقاعدة لترتيب العطور والتحف.", icon: "fa-ring", badge: "" },
-                    { id: "d4", name: "تمثال غزال ديكوري طلاء ذهبي مطفي", sub: "فازات وتحف", desc: "قطعة فنية جذابة تضيف فخامة على مكتبة التلفزيون.", icon: "fa-award", badge: "جديد" },
-                    { id: "d5", name: "ساعة حائط مودرن إطار معدني ذهبي", sub: "ساعات ولوحات", desc: "ماكينة صامتة تماماً بدون صوت عقارب مع تصميم هندسي.", icon: "fa-clock", badge: "" },
-                    { id: "d6", name: "طقم شمعدان ثلاثي كريستال وذهب", sub: "فازات وتحف", desc: "يضفي إضاءة رومانسية هادئة على سفرة أو ترابيزة الانتريه.", icon: "fa-menorah", badge: "" }
-                ]
+                badge: 'قسم الديكور',
+                title: 'ديكور الانتريه',
+                subtitle: 'لمسات عصرية تضيف دفئاً وفخامة لغرفة المعيشة',
+                categories: ['الكل', 'طاولات وإكسسوارات', 'إضاءات وتحف']
+            },
+            6: {
+                badge: 'مفروشات وديكور',
+                title: 'الرنارات',
+                subtitle: 'أحدث تشكيلة رنارات للسفرة والترابيزات بخامات وتصميمات راقية',
+                categories: ['الكل', 'رنارات سفرة', 'رنارات طاولات', 'رنارات مكرمية وخيش']
             },
             3: {
-                badge: "القسم الرابع",
-                title: "المكرميات والمشغولات اليدوية",
-                subtitle: "تصميمات بوهيمية مصنوعة يدوياً من أجود خيوط القطن الطبيعي",
-                subCategories: ["الكل", "معلقات حائط", "حامل زرع", "مفارش وكوشنز"],
-                products: [
-                    { id: "m1", name: "معلقة مكرمية حائط كبيرة بفرع خشب طبيعي", sub: "معلقات حائط", desc: "شغل يدوي متقن مقاس 70×90 سم يغير شكل الحائط بالكامل.", icon: "fa-spa", badge: "شغل يدوي" },
-                    { id: "m2", name: "حامل زرع مكرمية مزدوج", sub: "حامل زرع", desc: "يتحمل أوزان الأصص المختلفة ويضيف لمسة خضراء للمكان.", icon: "fa-seedling", badge: "الأكثر طلباً" },
-                    { id: "m3", name: "مفرش رانر مكرمية لترابيزة السفرة أو الانتريه", sub: "مفارش وكوشنز", desc: "خيط قطن 100% بلون أوف وايت دافئ يناسب كل الديكورات.", icon: "fa-scroll", badge: "" },
-                    { id: "m4", name: "مراية دائرية بإطار مكرمية بوهيمي", sub: "معلقات حائط", desc: "قطعة ديكور مميزة للمداخل وغرف النوم والريسبشن.", icon: "fa-circle-dot", badge: "جديد" },
-                    { id: "m5", name: "طقم كوسترات مكرمية للأكواب (4 قطع)", sub: "مفارش وكوشنز", desc: "يحمي الأسطح الخشبية والزجاجية بشكل جمالي.", icon: "fa-coasters", badge: "" }
-                ]
+                badge: 'أعمال يدوية',
+                title: 'المكرميات',
+                subtitle: 'تصاميم خيوط قطنية طبيعية بلمسة بوهيمية راقية',
+                categories: ['الكل', 'معلقات حائط', 'مكرميات للنباتات']
             },
             5: {
-                badge: "القسم الخامس (موسمي)",
-                title: "الأدوات المدرسية",
-                subtitle: "تشكيلة مميزة من اللانش بوكس، الزمزميات، والأدوات المكتبية",
-                subCategories: ["الكل", "لانش بوكس وزمزميات", "أقلام ومقالم"],
-                products: [
-                    { id: "s1", name: "لانش بوكس مقسم 3 خانات محكم الغلق", sub: "لانش بوكس وزمزميات", desc: "آمن تماماً للأطفال ومزود بملعقة وشوكة مدمجة.", icon: "fa-burger", badge: "حجز مسبق" },
-                    { id: "s2", name: "زمزمية رياضية بشاليموه 600 مل", sub: "لانش بوكس وزمزميات", desc: "مانعة للتسريب ومصنوعة من خامة تريتان الصحية.", icon: "fa-bottle-water", badge: "حجز مسبق" },
-                    { id: "s3", name: "مقلمة قماش بسوستتين سعة كبيرة", sub: "أقلام ومقالم", desc: "تصميمات عصرية للأولاد والبنات خامة قابلة للغسل.", icon: "fa-pen-ruler", badge: "حجز مسبق" },
-                    { id: "s4", name: "طقم أقلام جاف وألوان ماركر فاخرة", sub: "أقلام ومقالم", desc: "خط ناعم وألوان زاهية للمذاكرة والتلخيص.", icon: "fa-highlighter", badge: "حجز مسبق" }
-                ]
+                badge: 'القسم الموسمي',
+                title: 'الأدوات المدرسية',
+                subtitle: 'تشكيلة العودة للمدارس — يُفتح بالكامل قبل بداية المدارس بشهر',
+                categories: ['الكل', 'حفظ الطعام والماء', 'أدوات الكتابة']
             }
         };
 
-        let currentPage = 4;
-        let currentSubCategory = "الكل";
-        let searchQuery = "";
-        let cart = JSON.parse(localStorage.getItem('oscar_cart')) || [];
+        const products = [
+            // Page 4: Ramadan & Lights
+            { id: 'r1', page: 4, category: 'فوانيس وأنوار', name: 'فانوس رمضان معدني بإضاءة LED دافئة', desc: 'تصميم شرقي أنيق بإضاءة هادئة مناسبة للصالات والمداخل.' },
+            { id: 'r2', page: 4, category: 'فوانيس وأنوار', name: 'هلال ونجمة رمضان مضيئة للطاولات', desc: 'قطعة ديكور مميزة بقاعدة ثابتة وإضاءة متدرجة.' },
+            { id: 'r3', page: 4, category: 'فوانيس وأنوار', name: 'حبل زينة رمضان أنوار متصلة', desc: 'إضاءة زينة مرنة لتعليقها على الجدران والستائر والشرفات.' },
+            { id: 'r4', page: 4, category: 'مباخر وضيافة', name: 'مبخرة فاخرة بلمسة ذهبية', desc: 'مناسبة لتعطير المنزل بالعود والبخور في ليالي رمضان.' },
+            { id: 'r5', page: 4, category: 'مباخر وضيافة', name: 'شيالة ضيافة متعددة الأدوار', desc: 'مثالية لتقديم التمور والحلويات والمكسرات للضيوف.' },
+            { id: 'r6', page: 4, category: 'مباخر وضيافة', name: 'صينية تقديم رمضان بنقوش إسلامية', desc: 'تصميم راقٍ يجمع بين المتانة والشكل الاحتفالي.' },
 
-        document.addEventListener('DOMContentLoaded', () => {
-            updateCartUI();
-            switchPage(4);
-        });
+            // Page 1: Kitchen Tools
+            { id: 'k1', page: 1, category: 'تقديم وضيافة', name: 'طقم مجات سيراميك يومي', desc: 'مناسب للمشروبات الساخنة والقهوة بتصميم مريح.' },
+            { id: 'k2', page: 1, category: 'تنظيم وتخزين', name: 'علب حفظ وتنظيم البقوليات والتوابل', desc: 'غطاء محكم يحافظ على نكهة المكونات ويرتب الدواليب.' },
+            { id: 'k3', page: 1, category: 'تنظيم وتخزين', name: 'منظم أدراج وأرفف المطبخ', desc: 'يساعد على استغلال المساحات وتسهيل الوصول للأدوات.' },
+            { id: 'k4', page: 1, category: 'تقديم وضيافة', name: 'مصفاة ومبشرة عملية للمطبخ', desc: 'خامات مريحة وسهلة التنظيف للاستخدام اليومي.' },
+
+            // Page 2: Living Room Decor
+            { id: 'l1', page: 2, category: 'طاولات وإكسسوارات', name: 'فازة زهور عصرية للانتريه', desc: 'تضفي لمسة جمالية على ترابيزة الوسط أو الكونسول.' },
+            { id: 'l2', page: 2, category: 'إضاءات وتحف', name: 'أباجورة إضاءة جانبية دافئة', desc: 'تمنح غرفة المعيشة إضاءة مريحة في السهرات المسائية.' },
+            { id: 'l3', page: 2, category: 'طاولات وإكسسوارات', name: 'صينية ديكور للانتريه بالشموع', desc: 'مثالية لتنسيق الشموع والورد المجفف بشكل أنيق.' },
+            { id: 'l4', page: 2, category: 'إضاءات وتحف', name: 'تحفة ديكور مودرن للرفوف', desc: 'تصميم بسيط يتماشى مع الديكورات الحديثة والكلاسيكية.' },
+
+            // Page 6: Runners (الرنارات)
+            { id: 'rn1', page: 6, category: 'رنارات سفرة', name: 'رنر سفرة قطيفة مطرز بلمسة ذهبية', desc: 'خامة ناعمة فاخرة تضفي أناقة مميزة على طاولة الطعام في العزومات.' },
+            { id: 'rn2', page: 6, category: 'رنارات طاولات', name: 'رنر ترابيزة انتريه مودرن مع شراشيب', desc: 'تصميم عصري يناسب ترابيزات الوسط والكونسول بمقاس عملي.' },
+            { id: 'rn3', page: 6, category: 'رنارات مكرمية وخيش', name: 'رنر خيش وقطن بوهيمي طبيعي', desc: 'ملمس طبيعي دافئ يتماشى مع ديكورات المكرمية والخشب.' },
+            { id: 'rn4', page: 6, category: 'رنارات سفرة', name: 'رنر سفرة كتان سادة بأطراف مزخرفة', desc: 'عملي وسهل التنظيف للاستخدام اليومي والمناسبات.' },
+
+            // Page 3: Macrame
+            { id: 'm1', page: 3, category: 'معلقات حائط', name: 'مكرمية حائط قطنية منسوجة يدوياً', desc: 'تضيف دفئاً وملمساً طبيعياً على حوائط الصالة أو الغرف.' },
+            { id: 'm2', page: 3, category: 'مكرميات للنباتات', name: 'علاقة مكرمية لأصص الزرع', desc: 'تعليق أنيق للنباتات الداخلية لتوفير مساحة وتجميل الركن.' },
+            { id: 'm3', page: 3, category: 'معلقات حائط', name: 'مفرش مكرمية للطاولات الجانبية', desc: 'عقد يدوية متقنة بخيوط قطنية ناعمة.' },
+
+            // Page 5: School Supplies
+            { id: 's1', page: 5, category: 'حفظ الطعام والماء', name: 'لانش بوكس مقسم بتصميم عملي', desc: 'مناسب لحفظ وجبة المدرسة بأقسام منظمة.' },
+            { id: 's2', page: 5, category: 'حفظ الطعام والماء', name: 'زمزمية مياه مدرسية بغطاء محكم', desc: 'سهلة الحمل والحمل اليومي في الحقيبة المدرسية.' },
+            { id: 's3', page: 5, category: 'أدوات الكتابة', name: 'مقلمة وأطقم أقلام ودفاتر دراسية', desc: 'تشكيلة متنوعة استعداداً لبداية العام الدراسي.' }
+        ];
+
+        let currentPage = 4;
+        let currentCategory = 'الكل';
+        let searchQuery = '';
+        let cart = {};
 
         function toggleTheme() {
             const html = document.documentElement;
+            const isDark = html.classList.toggle('dark');
             const icon = document.getElementById('themeIcon');
-            if (html.classList.contains('dark')) {
-                html.classList.remove('dark');
-                icon.className = 'fa-solid fa-moon text-lg';
-            } else {
-                html.classList.add('dark');
-                icon.className = 'fa-solid fa-sun text-lg';
-            }
+            icon.className = isDark ? 'fa-solid fa-sun text-lg' : 'fa-solid fa-moon text-lg';
         }
 
-        function switchPage(pageNumber) {
-            currentPage = pageNumber;
-            currentSubCategory = "الكل";
-            searchQuery = "";
-            document.getElementById('searchInput').value = "";
-            document.getElementById('mobileSearchInput').value = "";
-
-            document.querySelectorAll('.nav-btn').forEach(btn => {
-                const isSelected = parseInt(btn.dataset.page) === pageNumber;
-                if (isSelected) {
-                    btn.className = "nav-btn whitespace-nowrap px-4 py-2.5 rounded-xl text-sm font-black flex items-center gap-2 transition bg-oscar-gold text-black shadow-md";
-                } else {
-                    btn.className = "nav-btn whitespace-nowrap px-4 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 transition text-stone-600 dark:text-stone-300 hover:bg-stone-200 dark:hover:bg-oscar-cardDark";
-                }
-            });
-
-            const schoolBanner = document.getElementById('schoolBanner');
-            if (pageNumber === 5) {
-                schoolBanner.classList.remove('hidden');
-            } else {
-                schoolBanner.classList.add('hidden');
-            }
-
-            const data = storeData[pageNumber];
-            document.getElementById('pageBadge').textContent = data.badge;
-            document.getElementById('pageTitle').textContent = data.title;
-            document.getElementById('pageSubtitle').textContent = data.subtitle;
-
-            renderSubCategories(data.subCategories);
+        function switchPage(pageNum) {
+            currentPage = pageNum;
+            currentCategory = 'الكل';
+            renderNav();
+            renderPageHeader();
             renderProducts();
         }
 
-        function renderSubCategories(subs) {
-            const container = document.getElementById('subCategoryPills');
-            container.innerHTML = subs.map(sub => {
-                const active = sub === currentSubCategory;
-                return `
-                    <button onclick="selectSubCategory('${sub}')" 
-                            class="px-3.5 py-1.5 rounded-xl text-xs font-bold transition border ${
-                                active 
-                                ? 'bg-oscar-gold text-black border-oscar-gold shadow' 
-                                : 'bg-white dark:bg-oscar-cardDark text-stone-600 dark:text-stone-300 border-stone-200 dark:border-oscar-borderDark hover:border-oscar-gold'
-                            }">
-                        ${sub}
-                    </button>
-                `;
-            }).join('');
-        }
-
-        function selectSubCategory(sub) {
-            currentSubCategory = sub;
-            renderSubCategories(storeData[currentPage].subCategories);
+        function selectCategory(cat) {
+            currentCategory = cat;
+            renderPageHeader();
             renderProducts();
         }
 
         function handleSearch(val) {
             searchQuery = val.trim().toLowerCase();
+            const desktopInput = document.getElementById('searchInput');
+            const mobileInput = document.getElementById('mobileSearchInput');
+            if (desktopInput && desktopInput.value !== val) desktopInput.value = val;
+            if (mobileInput && mobileInput.value !== val) mobileInput.value = val;
             renderProducts();
         }
 
-        function openImageModal(src, title) {
-            document.getElementById('modalImgSrc').src = src;
-            document.getElementById('modalImgCaption').textContent = title;
-            const modal = document.getElementById('imageModal');
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
+        function renderNav() {
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                const p = Number(btn.getAttribute('data-page'));
+                if (p === currentPage) {
+                    btn.className = 'nav-btn whitespace-nowrap px-4 py-2.5 rounded-xl text-sm font-extrabold flex items-center gap-2 transition bg-oscar-gold text-black shadow';
+                } else {
+                    btn.className = 'nav-btn whitespace-nowrap px-4 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 transition text-stone-700 dark:text-stone-300 hover:bg-stone-200 dark:hover:bg-oscar-cardDark';
+                }
+            });
         }
 
-        function closeImageModal() {
-            const modal = document.getElementById('imageModal');
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
+        function renderPageHeader() {
+            const meta = pagesMeta[currentPage];
+            document.getElementById('pageBadge').textContent = meta.badge;
+            document.getElementById('pageTitle').textContent = meta.title;
+            document.getElementById('pageSubtitle').textContent = meta.subtitle;
+
+            const schoolBanner = document.getElementById('schoolBanner');
+            if (currentPage === 5) {
+                schoolBanner.classList.remove('hidden');
+            } else {
+                schoolBanner.classList.add('hidden');
+            }
+
+            const pillsContainer = document.getElementById('subCategoryPills');
+            pillsContainer.innerHTML = meta.categories.map(cat => {
+                const active = cat === currentCategory;
+                return `<button onclick="selectCategory('${cat}')" class="px-3.5 py-1.5 rounded-xl text-xs font-extrabold transition ${
+                    active
+                        ? 'bg-oscar-gold text-black shadow'
+                        : 'bg-stone-200 dark:bg-oscar-cardDark text-stone-700 dark:text-stone-300 hover:border-oscar-gold border border-transparent'
+                }">${cat}</button>`;
+            }).join('');
         }
 
         function renderProducts() {
             const container = document.getElementById('productsContainer');
-            let list = [];
+            let list = products.filter(p => p.page === currentPage);
+
+            if (currentCategory !== 'الكل') {
+                list = list.filter(p => p.category === currentCategory);
+            }
 
             if (searchQuery) {
-                Object.values(storeData).forEach(cat => {
-                    cat.products.forEach(p => {
-                        if (p.name.toLowerCase().includes(searchQuery) || p.desc.toLowerCase().includes(searchQuery)) {
-                            list.push(p);
-                        }
-                    });
-                });
-            } else {
-                list = storeData[currentPage].products.filter(p => 
-                    currentSubCategory === "الكل" || p.sub === currentSubCategory
+                list = products.filter(p =>
+                    p.name.toLowerCase().includes(searchQuery) ||
+                    p.desc.toLowerCase().includes(searchQuery) ||
+                    p.category.toLowerCase().includes(searchQuery)
                 );
             }
 
-            if (list.length === 0) {
+            if (!list.length) {
                 container.innerHTML = `
                     <div class="text-center py-16 bg-white dark:bg-oscar-cardDark rounded-3xl border border-stone-200 dark:border-oscar-borderDark">
-                        <i class="fa-solid fa-box-open text-4xl text-stone-400 mb-3"></i>
-                        <h3 class="font-bold text-lg">لا توجد منتجات مطابقة لبحثك</h3>
-                        <p class="text-sm text-stone-500 mt-1">جرب البحث بكلمة أخرى أو تصفح الأقسام</p>
-                    </div>
-                `;
+                        <i class="fa-solid fa-box-open text-4xl text-oscar-gold mb-3"></i>
+                        <p class="font-bold text-base">لا توجد منتجات مطابقة للبحث أو التصنيف الحالي.</p>
+                    </div>`;
                 return;
             }
 
             container.innerHTML = `
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    ${list.map(product => `
-                        <div class="group bg-white dark:bg-oscar-cardDark border border-stone-200 dark:border-oscar-borderDark hover:border-oscar-gold rounded-3xl p-4 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-xl">
-                            <div>
-                                ${product.image ? `
-                                    <div onclick="openImageModal('${product.image}', '${product.name}')" 
-                                         class="relative h-72 rounded-2xl bg-white border border-stone-200 dark:border-stone-800 flex items-center justify-center mb-4 overflow-hidden cursor-zoom-in">
-                                        <img src="${product.image}" alt="${product.name}" 
-                                             class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300">
-                                        ${product.badge ? `
-                                            <span class="absolute top-3 right-3 bg-oscar-gold text-black text-[11px] font-black px-2.5 py-1 rounded-lg shadow">
-                                                ${product.badge}
-                                            </span>
-                                        ` : ''}
-                                        <span class="absolute bottom-2.5 left-3 text-[11px] font-bold text-white bg-black/75 px-2.5 py-1 rounded-lg flex items-center gap-1">
-                                            <i class="fa-solid fa-magnifying-glass-plus text-oscar-gold"></i>
-                                            <span>تكبير</span>
-                                        </span>
+                    ${list.map(item => {
+                        const qty = cart[item.id]?.qty || 0;
+                        return `
+                            <div class="bg-white dark:bg-oscar-cardDark border border-stone-200 dark:border-oscar-borderDark hover:border-oscar-gold rounded-3xl p-5 flex flex-col justify-between transition shadow-sm hover:shadow-xl">
+                                <div>
+                                    <div class="flex items-center justify-between gap-2 mb-3">
+                                        <span class="text-xs font-bold bg-oscar-gold/15 text-oscar-goldDark dark:text-oscar-gold px-3 py-1 rounded-full">${item.category}</span>
+                                        <span class="text-xs text-stone-400 font-semibold">OSCAR STORE</span>
                                     </div>
-                                ` : `
-                                    <div class="relative h-44 rounded-2xl bg-stone-100 dark:bg-black border border-stone-200 dark:border-stone-800 flex items-center justify-center mb-4 overflow-hidden">
-                                        <i class="fa-solid ${product.icon} text-5xl text-oscar-goldDark dark:text-oscar-gold group-hover:scale-110 transition-transform duration-300"></i>
-                                        ${product.badge ? `
-                                            <span class="absolute top-3 right-3 bg-oscar-gold text-black text-[11px] font-black px-2.5 py-1 rounded-lg shadow">
-                                                ${product.badge}
-                                            </span>
-                                        ` : ''}
-                                        <span class="absolute bottom-2.5 left-3 text-[11px] font-bold text-stone-500 dark:text-stone-400 bg-white/80 dark:bg-black/80 px-2 py-0.5 rounded-md">
-                                            ${product.sub}
-                                        </span>
-                                    </div>
-                                `}
-                                <span class="inline-block text-[11px] font-bold text-oscar-goldDark dark:text-oscar-gold mb-1">${product.sub}</span>
-                                <h3 class="font-black text-lg text-stone-900 dark:text-white mb-1.5 group-hover:text-oscar-goldDark dark:group-hover:text-oscar-gold transition">
-                                    ${product.name}
-                                </h3>
-                                <p class="text-xs sm:text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-4">
-                                    ${product.desc}
-                                </p>
+                                    <h3 class="text-lg font-black mb-2 leading-snug">${item.name}</h3>
+                                    <p class="text-xs sm:text-sm text-stone-600 dark:text-stone-400 leading-relaxed mb-5">${item.desc}</p>
+                                </div>
+                                <div class="flex items-center justify-between gap-2 pt-3 border-t border-stone-100 dark:border-oscar-borderDark">
+                                    ${qty > 0 ? `
+                                        <div class="flex items-center gap-2 bg-stone-100 dark:bg-black px-3 py-1.5 rounded-xl border border-oscar-gold/50">
+                                            <button onclick="updateQty('${item.id}', -1)" class="w-7 h-7 rounded-lg bg-stone-200 dark:bg-oscar-cardDark font-black hover:bg-red-500 hover:text-white transition">-</button>
+                                            <span class="font-black text-sm min-w-[20px] text-center">${qty}</span>
+                                            <button onclick="updateQty('${item.id}', 1)" class="w-7 h-7 rounded-lg bg-oscar-gold text-black font-black hover:bg-oscar-goldHover transition">+</button>
+                                        </div>
+                                        <span class="text-xs font-bold text-emerald-500">في السلة</span>
+                                    ` : `
+                                        <button onclick="addToCart('${item.id}')" class="w-full bg-oscar-gold hover:bg-oscar-goldHover text-black font-black py-2.5 px-4 rounded-xl transition flex items-center justify-center gap-2 text-sm shadow">
+                                            <i class="fa-solid fa-cart-plus"></i>
+                                            <span>أضف إلى السلة</span>
+                                        </button>
+                                    `}
+                                </div>
                             </div>
-                            <button onclick="addToCart('${product.id}', '${product.name}')" 
-                                    class="w-full bg-stone-900 dark:bg-oscar-gold hover:bg-oscar-goldHover text-oscar-gold dark:text-black hover:text-black font-black py-3 rounded-2xl transition flex items-center justify-center gap-2 text-sm shadow">
-                                <i class="fa-solid fa-cart-plus"></i>
-                                <span>أضف إلى السلة</span>
-                            </button>
-                        </div>
-                    `).join('')}
-                </div>
-            `;
+                        `;
+                    }).join('')}
+                </div>`;
         }
 
-        function addToCart(id, name) {
-            const existing = cart.find(item => item.id === id);
-            if (existing) {
-                existing.qty += 1;
+        function addToCart(id) {
+            const prod = products.find(p => p.id === id);
+            if (!prod) return;
+            if (!cart[id]) {
+                cart[id] = { ...prod, qty: 1 };
             } else {
-                cart.push({ id, name, qty: 1 });
+                cart[id].qty += 1;
             }
-            saveCart();
-            showToast(`تمت إضافة "${name}" إلى السلة`);
+            updateCartUI();
+            renderProducts();
+            showToast(`تمت إضافة "${prod.name}" إلى السلة`);
         }
 
         function updateQty(id, delta) {
-            const item = cart.find(i => i.id === id);
-            if (!item) return;
-            item.qty += delta;
-            if (item.qty <= 0) {
-                cart = cart.filter(i => i.id !== id);
+            if (!cart[id]) return;
+            cart[id].qty += delta;
+            if (cart[id].qty <= 0) {
+                delete cart[id];
             }
-            saveCart();
-        }
-
-        function saveCart() {
-            localStorage.setItem('oscar_cart', JSON.stringify(cart));
             updateCartUI();
+            renderProducts();
         }
 
         function updateCartUI() {
-            const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
-            document.getElementById('cartBadge').textContent = totalItems;
-            document.getElementById('drawerItemCount').textContent = totalItems;
-            document.getElementById('cartTotalItemsCount').textContent = `${totalItems} قطعة`;
+            const items = Object.values(cart);
+            const totalQty = items.reduce((sum, item) => sum + item.qty, 0);
+
+            document.getElementById('cartBadge').textContent = totalQty;
+            document.getElementById('drawerItemCount').textContent = totalQty;
+            document.getElementById('cartTotalItemsCount').textContent = `${totalQty} قطعة`;
 
             const listEl = document.getElementById('cartItemsList');
             const formEl = document.getElementById('checkoutForm');
 
-            if (cart.length === 0) {
+            if (!items.length) {
                 listEl.innerHTML = `
-                    <div class="text-center py-12">
-                        <i class="fa-solid fa-bag-shopping text-5xl text-stone-300 dark:text-stone-700 mb-3"></i>
-                        <p class="font-bold text-stone-500">سلة مشترياتك فارغة حالياً</p>
-                        <p class="text-xs text-stone-400 mt-1">اختر المنتجات التي تعجبك وأضفها للسلة</p>
-                    </div>
-                `;
+                    <div class="text-center py-12 bg-stone-100 dark:bg-oscar-cardDark rounded-3xl border border-stone-200 dark:border-oscar-borderDark">
+                        <i class="fa-solid fa-bag-shopping text-4xl text-stone-400 mb-3"></i>
+                        <p class="font-bold text-sm text-stone-500 dark:text-stone-400">سلة المشتريات فارغة حالياً</p>
+                    </div>`;
                 formEl.classList.add('hidden');
-            } else {
-                formEl.classList.remove('hidden');
-                listEl.innerHTML = cart.map(item => `
-                    <div class="flex items-center justify-between gap-3 bg-stone-100 dark:bg-oscar-cardDark p-3.5 rounded-2xl border border-stone-200 dark:border-oscar-borderDark">
-                        <div class="flex-1">
-                            <h4 class="font-bold text-sm text-stone-900 dark:text-white">${item.name}</h4>
-                        </div>
-                        <div class="flex items-center gap-2 bg-white dark:bg-black px-2 py-1 rounded-xl border border-stone-200 dark:border-stone-800">
-                            <button onclick="updateQty('${item.id}', 1)" class="w-6 h-6 rounded-lg bg-oscar-gold text-black font-black text-xs">+</button>
-                            <span class="font-black text-sm w-5 text-center">${item.qty}</span>
-                            <button onclick="updateQty('${item.id}', -1)" class="w-6 h-6 rounded-lg bg-stone-200 dark:bg-stone-800 font-black text-xs">-</button>
-                        </div>
-                    </div>
-                `).join('');
+                return;
             }
+
+            formEl.classList.remove('hidden');
+            listEl.innerHTML = items.map(item => `
+                <div class="bg-stone-100 dark:bg-oscar-cardDark border border-stone-200 dark:border-oscar-borderDark rounded-2xl p-3.5 flex items-center justify-between gap-3">
+                    <div class="min-w-0">
+                        <h5 class="font-extrabold text-sm truncate">${item.name}</h5>
+                        <p class="text-xs text-stone-500 dark:text-stone-400">${item.category}</p>
+                    </div>
+                    <div class="flex items-center gap-2 shrink-0">
+                        <button onclick="updateQty('${item.id}', -1)" class="w-7 h-7 rounded-lg bg-white dark:bg-black border border-stone-300 dark:border-oscar-borderDark font-black">-</button>
+                        <span class="font-black text-sm w-5 text-center">${item.qty}</span>
+                        <button onclick="updateQty('${item.id}', 1)" class="w-7 h-7 rounded-lg bg-oscar-gold text-black font-black">+</button>
+                    </div>
+                </div>
+            `).join('');
         }
 
         function toggleCart(open) {
@@ -929,10 +738,10 @@
             const drawer = document.getElementById('cartDrawer');
             if (open) {
                 overlay.classList.remove('hidden');
-                drawer.classList.remove('-translate-x-full');
+                setTimeout(() => drawer.classList.remove('-translate-x-full'), 10);
             } else {
-                overlay.classList.add('hidden');
                 drawer.classList.add('-translate-x-full');
+                setTimeout(() => overlay.classList.add('hidden'), 300);
             }
         }
 
@@ -940,7 +749,6 @@
             const addrGroup = document.getElementById('addressFieldGroup');
             const addrInput = document.getElementById('custAddress');
             const pickupInfo = document.getElementById('storePickupInfo');
-
             if (isDelivery) {
                 addrGroup.classList.remove('hidden');
                 addrInput.required = true;
@@ -954,32 +762,42 @@
 
         function submitOrder(e) {
             e.preventDefault();
+            const items = Object.values(cart);
+            if (!items.length) return;
+
             const name = document.getElementById('custName').value.trim();
             const delivery = document.querySelector('input[name="deliveryMethod"]:checked').value;
-            const payment = document.querySelector('input[name="paymentMethod"]:checked').value;
             const address = document.getElementById('custAddress').value.trim();
+            const payment = document.querySelector('input[name="paymentMethod"]:checked').value;
+            const totalQty = items.reduce((sum, item) => sum + item.qty, 0);
 
-            const itemsHtml = cart.map(i => `<li>• ${i.name} <strong>(العدد: ${i.qty})</strong></li>`).join('');
-
-            document.getElementById('orderSummaryDetails').innerHTML = `
-                <p><strong>الاسم:</strong> ${name}</p>
+            const summaryHtml = `
+                <p><strong>العميل:</strong> ${name}</p>
                 <p><strong>طريقة الاستلام:</strong> ${delivery}</p>
-                ${delivery === 'مندوب توصيل' ? `<p><strong>العنوان:</strong> ${address}</p>` : ''}
+                ${delivery === 'مندوب توصيل'
+                    ? `<p><strong>العنوان:</strong> ${address}</p>`
+                    : `<p><strong>فرع الاستلام:</strong> بورسعيد : سعد زغلول والمغرب (الثلاثيني ثالث شارع بعد محمد علي)</p>`
+                }
                 <p><strong>طريقة الدفع:</strong> ${payment}</p>
-                <hr class="border-stone-300 dark:border-stone-800 my-2">
-                <p class="font-bold text-oscar-goldDark dark:text-oscar-gold">المنتجات المطلوبة:</p>
-                <ul class="space-y-1 pr-2">${itemsHtml}</ul>
-            `;
+                <p><strong>إجمالي القطع:</strong> ${totalQty} قطعة</p>
+                <div class="pt-2 border-t border-stone-200 dark:border-stone-800">
+                    <strong>المنتجات:</strong>
+                    <ul class="list-disc pr-4 mt-1 space-y-1">
+                        ${items.map(i => `<li>${i.name} — <strong>${i.qty}</strong></li>`).join('')}
+                    </ul>
+                </div>`;
 
-            toggleCart(false);
+            document.getElementById('orderSummaryDetails').innerHTML = summaryHtml;
             const modal = document.getElementById('orderModal');
             modal.classList.remove('hidden');
             modal.classList.add('flex');
 
-            cart = [];
-            saveCart();
+            cart = {};
+            updateCartUI();
+            renderProducts();
             document.getElementById('checkoutForm').reset();
             toggleAddressField(true);
+            toggleCart(false);
         }
 
         function closeOrderModal() {
@@ -988,16 +806,35 @@
             modal.classList.remove('flex');
         }
 
-        let toastTimer;
+        function openImageModal(src, caption = '') {
+            document.getElementById('modalImageSrc').src = src;
+            document.getElementById('modalImageCaption').textContent = caption;
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
         function showToast(msg) {
             const box = document.getElementById('toastBox');
             document.getElementById('toastMessage').textContent = msg;
             box.classList.remove('translate-y-24', 'opacity-0');
-            clearTimeout(toastTimer);
-            toastTimer = setTimeout(() => {
+            clearTimeout(window.toastTimer);
+            window.toastTimer = setTimeout(() => {
                 box.classList.add('translate-y-24', 'opacity-0');
-            }, 3000);
+            }, 2600);
         }
+
+        // Initial Render
+        renderNav();
+        renderPageHeader();
+        renderProducts();
+        updateCartUI();
     </script>
 </body>
 </html>
