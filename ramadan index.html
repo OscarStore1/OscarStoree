@@ -1,29 +1,32 @@
 <html>
 <head>
-  <title>ديكور رمضان</title>
-  <style>
-    body { text-align: center; background: #fff8ee; }
-    h1 { font-size: 30px; }
-    img { width: 200px; margin: 8px; border-radius: 12px; }
-  </style>
+<meta charset="utf-8">
+<title>Ramadan Decor</title>
+<style>
+body { text-align: center; background: #fff8ee; }
+h1 { font-size: 30px; }
+img { width: 200px; margin: 8px; border-radius: 12px; }
+</style>
 </head>
 <body>
-  <h1>ديكور رمضان</h1>
-  <p>كل صور الديكور هنا</p>
-  <div id="gallery"></div>
+<h1>Ramadan Decor</h1>
+<p>All Photos Here</p>
+<div id="gallery"></div>
 
-  <script>
-    fetch("https://api.github.com/repos/oa4172724-del/OscarStoree/contents/?t=" + Date.now())
-      .then(r => r.json())
-      .then(files => {
-        files.forEach(f => {
-          if (f.name.toLowerCase().endsWith(".jpg")  f.name.toLowerCase().endsWith(".jpeg")  f.name.toLowerCase().endsWith(".png")) {
-            let img = document.createElement("img");
-            img.src = f.name;
-            document.getElementById("gallery").appendChild(img);
-          }
-        });
-      });
-  </script>
+<script>
+fetch("https://api.github.com/repos/oa4172724-del/OscarStoree/contents/?t=" + Date.now(), { cache: "no-store" })
+.then(r => r.json())
+.then(files => {
+files.forEach(f => {
+let name = f.name.toLowerCase();
+if (name.endsWith(".jpg")  name.endsWith(".jpeg")  name.endsWith(".png") || name.endsWith(".webp")) {
+let img = document.createElement("img");
+img.src = encodeURI(f.name) + "?t=" + Date.now();
+img.loading = "lazy";
+document.getElementById("gallery").appendChild(img);
+}
+});
+});
+</script>
 </body>
 </html>
