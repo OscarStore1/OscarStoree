@@ -711,11 +711,21 @@ fetch("https://api.github.com/repos/OscarStore1/OscarStoree/git/trees/main?recur
   d.tree.forEach(f=>{
     let path = f.path;
     let low = path.toLowerCase();
-    // خد صور الواتساب بس، وسيب الفوانيس خالص
+   // --- رنرات أوتوماتيك - صور الواتساب بس ---
+const existingMac = new Set(storeData[3].products.map(p => p.image));
+fetch("https://api.github.com/repos/OscarStore1/OscarStoree/git/trees/main?recursive=1&t="+Date.now())
+.then(r=>r.json()).then(d=>{
+  let newMac = [];
+  let n = 1;
+  d.tree.forEach(f=>{
+    let path = f.path;
+    let low = path.toLowerCase();
     if(!low.includes("whatsapp")) return;
     if(!low.endsWith(".jpg") && !low.endsWith(".png") && !low.endsWith(".jpeg")) return;
     if(existingMac.has(path)) return;
-    newMac.push({ id: "runner_"+n, name: "رنر " + n, sub: "مفارش وكوشنز", image: encodeURI(path), desc: "رنر مكرمية شغل يدوي من أوسكار ستور - خيوط قطن طبيعي.", badge: "شغل يدوي" });
+    // رابط خام عشان المسافات والأقواس
+    let imgUrl = "https://raw.githubusercontent.com/OscarStore1/OscarStoree/main/" + path.split("/").map(s=>encodeURIComponent(s)).join("/");
+    newMac.push({ id: "runner_"+n, name: "رنر " + n, sub: "مفارش وكوشنز", image: imgUrl, desc: "رنر مكرمية شغل يدوي من أوسكار ستور - خيوط قطن طبيعي.", badge: "شغل يدوي" });
     n++;
   });
   storeData[3].products = [...storeData[3].products, ...newMac];
