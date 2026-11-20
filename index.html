@@ -686,24 +686,6 @@
             }
         };
 
-        // === الجزء الجديد: إضافة كل الصور أوتوماتيك ===
-        const existingImages = new Set(storeData[4].products.map(p => p.image));
-        fetch("https://api.github.com/repos/OscarStore1/OscarStoree/git/trees/main?recursive=1&t="+Date.now())
-        .then(r=>r.json()).then(d=>{
-          let newProducts = [];
-          d.tree.forEach(f=>{
-            let path = f.path;
-            if(!path.toLowerCase().endsWith(".jpg") && !path.toLowerCase().endsWith(".png")) return;
-            if(existingImages.has(path)) return;
-            if(path.includes("590806631") || path.includes("watermarked")) return;
-            let name = path.replace(".JPG","").replace(".jpg","").replace(".PNG","").replace(".png","");
-            newProducts.push({ id: "auto_"+name, name: "منتج رمضان - " + name, sub: "فوانيس", image: path, desc: "منتج جديد من تشكيلة رمضان في أوسكار ستور - اسأل عن السعر في المحل أو عند الطلب.", badge: "جديد" });
-          });
-          newProducts.reverse();
-          storeData[4].products = [...storeData[4].products, ...newProducts];
-          if(typeof currentPage !== 'undefined' && currentPage === 4) renderProducts();
-        }).catch(e=>console.log(e));
-
         let currentPage = 4;
         let currentSubCategory = "الكل";
         let searchQuery = "";
@@ -849,7 +831,7 @@
                                             <span>تكبير</span>
                                         </span>
                                     </div>
-                                 : 
+                                ` : `
                                     <div class="relative h-44 rounded-2xl bg-stone-100 dark:bg-black border border-stone-200 dark:border-stone-800 flex items-center justify-center mb-4 overflow-hidden">
                                         <i class="fa-solid ${product.icon} text-5xl text-oscar-goldDark dark:text-oscar-gold group-hover:scale-110 transition-transform duration-300"></i>
                                         ${product.badge ? `
@@ -889,7 +871,7 @@
                 cart.push({ id, name, qty: 1 });
             }
             saveCart();
-            showToast(تمت إضافة "${name}" إلى السلة);
+            showToast(`تمت إضافة "${name}" إلى السلة`);
         }
 
         function updateQty(id, delta) {
@@ -911,7 +893,7 @@
             const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
             document.getElementById('cartBadge').textContent = totalItems;
             document.getElementById('drawerItemCount').textContent = totalItems;
-            document.getElementById('cartTotalItemsCount').textContent = ${totalItems} قطعة;
+            document.getElementById('cartTotalItemsCount').textContent = `${totalItems} قطعة`;
 
             const listEl = document.getElementById('cartItemsList');
             const formEl = document.getElementById('checkoutForm');
@@ -977,12 +959,12 @@
             const payment = document.querySelector('input[name="paymentMethod"]:checked').value;
             const address = document.getElementById('custAddress').value.trim();
 
-            const itemsHtml = cart.map(i => <li>• ${i.name} <strong>(العدد: ${i.qty})</strong></li>).join('');
+            const itemsHtml = cart.map(i => `<li>• ${i.name} <strong>(العدد: ${i.qty})</strong></li>`).join('');
 
             document.getElementById('orderSummaryDetails').innerHTML = `
                 <p><strong>الاسم:</strong> ${name}</p>
                 <p><strong>طريقة الاستلام:</strong> ${delivery}</p>
-                ${delivery === 'مندوب توصيل' ? <p><strong>العنوان:</strong> ${address}</p> : ''}
+                ${delivery === 'مندوب توصيل' ? `<p><strong>العنوان:</strong> ${address}</p>` : ''}
                 <p><strong>طريقة الدفع:</strong> ${payment}</p>
                 <hr class="border-stone-300 dark:border-stone-800 my-2">
                 <p class="font-bold text-oscar-goldDark dark:text-oscar-gold">المنتجات المطلوبة:</p>
