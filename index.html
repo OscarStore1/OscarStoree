@@ -685,7 +685,6 @@
                 ]
             }
         };
-
      const existingImages = new Set(storeData[4].products.map(p => p.image));
 fetch("https://api.github.com/repos/OscarStore1/OscarStoree/git/trees/main?recursive=1&t="+Date.now())
 .then(r=>r.json()).then(d=>{
