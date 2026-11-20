@@ -13,7 +13,7 @@
   <div id="gallery"></div>
 
   <script>
-    fetch("https://api.github.com/repos/oa4172724-del/OscarStoree/contents/")
+    fetch("https://api.github.com/repos/oa4172724-del/OscarStoree/contents/?t=" + Date.now())
       .then(r => r.json())
       .then(files => {
         files.forEach(f => {
