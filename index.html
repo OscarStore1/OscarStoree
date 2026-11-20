@@ -702,15 +702,6 @@ fetch("https://api.github.com/repos/OscarStore1/OscarStoree/git/trees/main?recur
   storeData[4].products = [...storeData[4].products, ...newProducts];
   if(typeof currentPage !== 'undefined' && currentPage === 4) renderProducts();
 }).catch(e=>console.log(e));   
-       // --- رنرات أوتوماتيك - صور الواتساب بس ---
-const existingMac = new Set(storeData[3].products.map(p => p.image));
-fetch("https://api.github.com/repos/OscarStore1/OscarStoree/git/trees/main?recursive=1&t="+Date.now())
-.then(r=>r.json()).then(d=>{
-  let newMac = [];
-  let n = 1;
-  d.tree.forEach(f=>{
-    let path = f.path;
-    let low = path.toLowerCase();
    // --- رنرات أوتوماتيك - صور الواتساب بس ---
 const existingMac = new Set(storeData[3].products.map(p => p.image));
 fetch("https://api.github.com/repos/OscarStore1/OscarStoree/git/trees/main?recursive=1&t="+Date.now())
