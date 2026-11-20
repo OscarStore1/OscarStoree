@@ -580,8 +580,6 @@ fetch("https://api.github.com/repos/OscarStore1/OscarStoree/git/trees/main?recur
   if(typeof currentPage !== 'undefined' && currentPage === 4) renderProducts();
   else renderProducts();
 }).catch(e=>console.log(e));
-        }
-
         function selectCategory(cat) {
             currentCategory = cat;
             renderPageHeader();
