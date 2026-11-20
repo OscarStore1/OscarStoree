@@ -17,7 +17,7 @@ fetch("https://api.github.com/repos/OscarStore1/OscarStoree/git/trees/main?recur
 function showMore(){
   for(let i=0;i<50 && shown<all.length;i++,shown++){
     let img=document.createElement("img");
-    img.src="https://raw.githubusercontent.com/OscarStore1/OscarStoree/main/"+all[shown].path;
+    img.src="https://oscarstore1.github.io/OscarStoree/"+all[shown].path;
     img.loading="lazy";
     document.getElementById("gallery").appendChild(img);
   }
