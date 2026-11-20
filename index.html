@@ -542,23 +542,7 @@
             { id: 's2', page: 5, category: 'حفظ الطعام والماء', name: 'زمزمية مياه مدرسية بغطاء محكم', desc: 'سهلة الحمل والحمل اليومي في الحقيبة المدرسية.' },
             { id: 's3', page: 5, category: 'أدوات الكتابة', name: 'مقلمة وأطقم أقلام ودفاتر دراسية', desc: 'تشكيلة متنوعة استعداداً لبداية العام الدراسي.' }
         ];
-        const existingImages = new Set(storeData[4].products.map(p => p.image));
-fetch("https://api.github.com/repos/OscarStore1/OscarStoree/git/trees/main?recursive=1&t="+Date.now())
-.then(r=>r.json()).then(d=>{
-  let newProducts = [];
-  d.tree.forEach(f=>{
-    let path = f.path;
-    if(!path.toLowerCase().endsWith(".jpg") && !path.toLowerCase().endsWith(".png")) return;
-    if(existingImages.has(path)) return;
-    if(path.includes("590806631") || path.includes("watermarked")) return;
-    let name = path.replace(".JPG","").replace(".jpg","").replace(".PNG","").replace(".png","");
-    newProducts.push({ id: "auto_"+name, name: "منتج رمضان - " + name, sub: "فوانيس", image: path, desc: "منتج جديد من تشكيلة رمضان - اسأل عن السعر في المحل.", badge: "جديد" });
-  });
-  newProducts.reverse();
-  storeData[4].products = [...storeData[4].products, ...newProducts];
-  if(typeof currentPage !== 'undefined' && currentPage === 4) renderProducts();
-}).catch(e=>console.log(e));
-
+        
         let currentPage = 4;
         let currentCategory = 'الكل';
         let searchQuery = '';
@@ -577,6 +561,25 @@ fetch("https://api.github.com/repos/OscarStore1/OscarStoree/git/trees/main?recur
             renderNav();
             renderPageHeader();
             renderProducts();
+            // تحميل الـ 168 صورة تلقائياً - من غير تكرار ومن غير اللوجو
+const existingImages = new Set(storeData[4].products.map(p => p.image));
+fetch("https://api.github.com/repos/OscarStore1/OscarStoree/git/trees/main?recursive=1&t="+Date.now())
+.then(r=>r.json()).then(d=>{
+  let newProducts = [];
+  d.tree.forEach(f=>{
+    let path = f.path;
+    if(!path.toLowerCase().endsWith(".jpg") && !path.toLowerCase().endsWith(".png")) return;
+    if(existingImages.has(path)) return;
+    if(path.includes("590806631") || path.includes("watermarked") || path.toLowerCase().includes("copy")) return;
+    let name = path.replace(".JPG","").replace(".jpg","").replace(".PNG","").replace(".png","");
+    newProducts.push({ id: "auto_"+name, name: "منتج رمضان - " + name, sub: "فوانيس", image: path, desc: "منتج جديد من تشكيلة رمضان - اسأل عن السعر في المحل.", badge: "جديد" });
+  });
+  newProducts.reverse();
+  storeData[4].products = [...storeData[4].products, ...newProducts];
+  // دي أهم سطر، عشان يعيد رسم الصور بعد ما يجيبهم
+  if(typeof currentPage !== 'undefined' && currentPage === 4) renderProducts();
+  else renderProducts();
+}).catch(e=>console.log(e));
         }
 
         function selectCategory(cat) {
