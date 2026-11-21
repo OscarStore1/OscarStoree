@@ -943,7 +943,7 @@
           }, 300);
         };
 
-      // ===== عرض صور GitHub - الفوانيس هتفضل زي ما هي =====
+     // ===== Show GitHub Images - All English - Lanterns will stay =====
 fetch("https://api.github.com/repos/OscarStore1/OscarStoree/git/trees/main?recursive=1&t="+Date.now())
 .then(r=>r.json()).then(d=>{
   if(!d.tree) return;
@@ -956,26 +956,24 @@ fetch("https://api.github.com/repos/OscarStore1/OscarStoree/git/trees/main?recur
     let safeImage = f.path.split("/").map(part => encodeURIComponent(part)).join("/");
     if(products.find(p=>p.image===safeImage)) return;
     let fileName = f.path.split("/").pop();
-    let cleanName = fileName.replace(".jpeg","").replace(".jpg","").replace(".png","").replace(/[_-]/g," ").replace("WhatsApp Image","صورة").replace("2026-11-20 at 7.39.34 PM","");
-
-    let isRunner = f.path.toLowerCase().includes("runners/") || f.path.toLowerCase().includes("runner") || f.path.toLowerCase().includes("رنر");
+    let cleanName = fileName.replace(".jpeg","").replace(".jpg","").replace(".png","").replace(/[_-]/g," ").replace("WhatsApp Image","Image").replace("2026-11-20 at 7.39.34 PM","");
+    let isRunner = f.path.toLowerCase().includes("2026-11-20") || f.path.toLowerCase().includes("runners/") || f.path.toLowerCase().includes("runner");
     if(isRunner){
       products.push({
         id: "auto_"+f.path,
         page: 6,
-        category: "رنارات سفرة",
-        name: "رنر - " + cleanName,
-        desc: "رنر من تشكيلة أوسكار ستور - اسأل عن السعر في المحل",
+        category: "Table Runners",
+        name: "Runner - " + cleanName,
+        desc: "Runner from Oscar Store collection - Ask for price in store",
         image: safeImage
       });
     } else {
-      // دي الفوانيس - هتفضل في رمضان زي ما هي
       products.push({
         id: "auto_"+f.path,
         page: 4,
-        category: "فوانيس وأنوار",
-        name: "فانوس رمضان - " + cleanName,
-        desc: "اسأل عن السعر في المحل - من تشكيلة أوسكار ستور",
+        category: "Lanterns & Lights",
+        name: "Ramadan Lantern - " + cleanName,
+        desc: "Ask for price in store - From Oscar Store collection",
         image: safeImage
       });
     }
