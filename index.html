@@ -945,7 +945,7 @@
           }, 300);
         };
 
-     // تحميل صور المنتجات الموجودة في مستودع GitHub تلقائياً
+     // تحميل صور المنتجات من GitHub مع منع الملفات المكررة
 fetch("https://api.github.com/repos/OscarStore1/OscarStoree/git/trees/main?recursive=1")
   .then(response => {
     if (!response.ok) throw new Error("تعذر تحميل صور المنتجات");
@@ -954,10 +954,22 @@ fetch("https://api.github.com/repos/OscarStore1/OscarStoree/git/trees/main?recur
   .then(data => {
     if (!Array.isArray(data.tree)) return;
 
+    const seenHashes = new Set();
+    const seenNames = new Set(products.map(product => {
+      const image = (product.image || "").split("?")[0];
+      return decodeURIComponent(image.split("/").pop() || "").toLowerCase();
+    }));
+
     const imageFiles = data.tree.filter(file => {
+      if (file.type !== "blob") return false;
       const path = file.path.toLowerCase();
-      return /\.(jpg|jpeg|png|webp)$/i.test(path) &&
-        !/(watermarked|copy|\(1\)|\(2\)|-copy)/i.test(path);
+      const fileName = path.split("/").pop();
+      if (!/\.(jpg|jpeg|png|webp)$/i.test(path)) return false;
+      if (/(watermarked|copy|\(1\)|\(2\)|-copy|_copy|logo|banner|background|hero)/i.test(fileName)) return false;
+      if (seenHashes.has(file.sha) || seenNames.has(fileName)) return false;
+      seenHashes.add(file.sha);
+      seenNames.add(fileName);
+      return true;
     });
 
     imageFiles.forEach(file => {
@@ -993,3 +1005,4 @@ fetch("https://api.github.com/repos/OscarStore1/OscarStoree/git/trees/main?recur
 </div>
 </body>
 </html>
+```[cite: 3]
