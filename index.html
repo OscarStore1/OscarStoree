@@ -943,26 +943,45 @@
           }, 300);
         };
 
-        // ===== صور رمضان من GitHub - بتجيب كل الصور في الريبو =====
-        fetch("https://api.github.com/repos/OscarStore1/OscarStoree/git/trees/main?recursive=1&t="+Date.now())
-        .then(r=>r.json()).then(d=>{
-          let all = d.tree.filter(f=> f.path.toLowerCase().endsWith(".jpg") || f.path.toLowerCase().endsWith(".png"))
-          .filter(f=> !f.path.includes("590806631") && !f.path.toLowerCase().includes("watermarked") && !f.path.toLowerCase().includes("copy"));
-          all.forEach(f=>{
-            let cleanName = f.path.split("/").pop().replace(".jpg","").replace(".png","").replace(/[-_]/g," ");
-            if(!products.find(p=>p.image===f.path)){
-              products.push({
-                id: "auto_"+f.path,
-                page: 4,
-                category: "فوانيس وأنوار",
-                name: "فانوس رمضان - " + cleanName,
-                desc: "اسأل عن السعر في المحل - فانوس رمضان من تشكيلة أوسكار ستور",
-                image: f.path
-              });
-            }
-          });
-          if(currentPage===4) renderProducts();
-        }).catch(e=> console.log(e));
+      // ===== عرض صور GitHub - الفوانيس هتفضل زي ما هي =====
+fetch("https://api.github.com/repos/OscarStore1/OscarStoree/git/trees/main?recursive=1&t="+Date.now())
+.then(r=>r.json()).then(d=>{
+  if(!d.tree) return;
+  let all = d.tree.filter(f=> {
+    let p = f.path.toLowerCase();
+    return p.endsWith(".jpg") || p.endsWith(".jpeg") || p.endsWith(".png") || p.endsWith(".webp");
+  })
+  .filter(f=> !f.path.toLowerCase().includes("watermarked") && !f.path.toLowerCase().includes("copy"));
+  all.forEach(f=>{
+    let safeImage = f.path.split("/").map(part => encodeURIComponent(part)).join("/");
+    if(products.find(p=>p.image===safeImage)) return;
+    let fileName = f.path.split("/").pop();
+    let cleanName = fileName.replace(".jpeg","").replace(".jpg","").replace(".png","").replace(/[_-]/g," ").replace("WhatsApp Image","صورة").replace("2026-11-20 at 7.39.34 PM","");
+
+    let isRunner = f.path.toLowerCase().includes("runners/") || f.path.toLowerCase().includes("runner") || f.path.toLowerCase().includes("رنر");
+    if(isRunner){
+      products.push({
+        id: "auto_"+f.path,
+        page: 6,
+        category: "رنارات سفرة",
+        name: "رنر - " + cleanName,
+        desc: "رنر من تشكيلة أوسكار ستور - اسأل عن السعر في المحل",
+        image: safeImage
+      });
+    } else {
+      // دي الفوانيس - هتفضل في رمضان زي ما هي
+      products.push({
+        id: "auto_"+f.path,
+        page: 4,
+        category: "فوانيس وأنوار",
+        name: "فانوس رمضان - " + cleanName,
+        desc: "اسأل عن السعر في المحل - من تشكيلة أوسكار ستور",
+        image: safeImage
+      });
+    }
+  });
+  if(currentPage===4 || currentPage===6) renderProducts();
+}).catch(e=>{ console.log(e); });
     </script>
 </body>
 </html>
