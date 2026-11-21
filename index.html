@@ -955,7 +955,7 @@ fetch("https://api.github.com/repos/OscarStore1/OscarStoree/git/trees/main?recur
     let safeImage = f.path.split("/").map(part => encodeURIComponent(part)).join("/");
     if(products.find(p=>p.image===safeImage)) return;
     let fileName = f.path.split("/").pop();
-    let cleanName = fileName.replace(".jpeg","").replace(".jpg","").replace(".png","").replace(/[_-]/g," ").replace("WhatsApp Image","Image").replace("2026-11-20 at 7.39.34 PM","");
+  let cleanName = fileName.replace(/\.(jpe?g|png|webp)$/i,"").replace(/-/g," ");
     let isRunner = f.path.toLowerCase().includes("2026-11-20") || f.path.toLowerCase().includes("runners/") || f.path.toLowerCase().includes("runner");
     if(isRunner){
       products.push({
