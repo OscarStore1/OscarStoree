@@ -980,6 +980,40 @@ fetch("https://api.github.com/repos/OscarStore1/OscarStoree/git/trees/main?recur
   if(currentPage===4 || currentPage===6) renderProducts();
 }).catch(e=>{ console.log(e); });
     </script>
+    <script>
+// إصلاح نهائي - بنفس أسماء زرارينك
+let gateType = null;
+
+function selectGateType(type){
+  gateType = type;
+  // type هيكون 'retail' أو 'wholesale' أو 'قطاعي' أو 'جملة'
+  let retailBtn = document.getElementById('gateRetailBtn');
+  let wholeBtn = document.getElementById('gateWholesaleBtn');
+
+  if(retailBtn) { retailBtn.style.border = '2px solid #ccc'; retailBtn.style.boxShadow = 'none'; }
+  if(wholeBtn) { wholeBtn.style.border = '2px solid #ccc'; wholeBtn.style.boxShadow = 'none'; }
+
+  if(type.includes('retail') || type.includes('قطاعي')){
+    if(retailBtn){ retailBtn.style.border = '3px solid #FFD700'; retailBtn.style.boxShadow = '0 0 15px #FFD700'; }
+    alert('تم اختيار قطاعي');
+  } else {
+    if(wholeBtn){ wholeBtn.style.border = '3px solid #FFD700'; wholeBtn.style.boxShadow = '0 0 15px #FFD700'; }
+    alert('تم اختيار جملة');
+  }
+}
+
+function enterStore(){
+  if(!gateType){ alert('اختار جملة أو قطاعي الأول'); return; }
+  let phoneInput = document.querySelector('input[type="tel"]');
+  let phone = phoneInput ? phoneInput.value.trim() : '';
+  if(!phone || phone.length < 11){ alert('اكتب رقمك كامل 11 رقم زي 01215269762'); return; }
+
+  // إخفاء بوابة الدخول
+  let gate = document.getElementById('typeGate');
+  if(gate) gate.style.display = 'none';
+  alert('تمام دخلت كـ ' + gateType);
+}
+</script>
     <!-- توقيع المطور -->
 <div style="text-align:center; padding:18px 10px; background: linear-gradient(90deg, #000000, #6a1b9a, #000000); color:#FFD700; font-weight:bold; font-size:18px; font-family:Arial; letter-spacing:1px; border-top:3px solid #FFD700; margin-top:30px;">
   Develop By Omar / <a href="tel:01215269762" style="color:#FFD700; text-decoration:none;">01215269762</a>
