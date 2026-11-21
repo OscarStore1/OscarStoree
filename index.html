@@ -965,7 +965,7 @@ fetch("https://api.github.com/repos/OscarStore1/OscarStoree/git/trees/main?recur
         name: "Runner - " + cleanName,
         desc: "Runner from Oscar Store collection - Ask for price in store",
         image: safeImage
-      });
+      })
     } else {
       products.push({
         id: "auto_"+f.path,
@@ -974,8 +974,8 @@ fetch("https://api.github.com/repos/OscarStore1/OscarStoree/git/trees/main?recur
         name: "Ramadan Lantern - " + cleanName,
         desc: "Ask for price in store - From Oscar Store collection",
         image: safeImage
-      });
-    }})
+      })
+    })
 if(currentPage==4 || currentPage==6) renderProducts();
     })
 .catch(e=>{ console.log(e); });
