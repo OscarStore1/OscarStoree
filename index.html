@@ -863,11 +863,7 @@
             document.getElementById('toastMessage').textContent = msg;
             box.classList.remove('translate-y-24', 'opacity-0');
             clearTimeout(window.toastTimer);
-            window.toastTimer = setTimeout(() => {
-                box.classList.add('translate-y-24', 'opacity-0');
-            }, 2600);
         }
-
         // Initial Render
         renderNav();
         renderPageHeader();
