@@ -951,8 +951,7 @@ fetch("https://api.github.com/repos/OscarStore1/OscarStoree/git/trees/main?recur
     let p = f.path.toLowerCase();
     return p.endsWith(".jpg") || p.endsWith(".jpeg") || p.endsWith(".png") || p.endsWith(".webp");
   })
-  .filter(f=> !f.path.toLowerCase().includes("watermarked") && !f.path.toLowerCase().includes("copy"));
-  all.forEach(f=>{
+  .filter(f=> !f.path.toLowerCase().includes("watermarked") && !f.path.toLowerCase().includes("copy") && !f.path.includes(" (1)") && !f.path.includes(" (2)") && !f.path.includes("(1)") && !f.path.includes("-copy"));
     let safeImage = f.path.split("/").map(part => encodeURIComponent(part)).join("/");
     if(products.find(p=>p.image===safeImage)) return;
     let fileName = f.path.split("/").pop();
