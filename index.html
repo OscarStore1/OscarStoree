@@ -1015,20 +1015,39 @@
                 path.split("/").map(encodeURIComponent).join("/");
               if (products.some(product => product.image === safeImage)) return;
 
-              const fileName = path.split("/").pop();
-              const cleanName = fileName
-                .replace(/\.(jpe?g|png|webp)$/i, "")
-                .replace(/[-_]+/g, " ")
-                .replace(/\s+/g, " ")
-                .trim();
               const isRunner = lowerPath.includes("runner") || lowerPath.includes("رنر") ||
                 lowerPath.includes("2026-11-20");
+
+              const nameRules = [
+                [/fanous|lantern|فانوس/i, "فانوس ديكور"],
+                [/hilal|crescent|moon|هلال/i, "هلال رمضان مضيء"],
+                [/star|نجمة/i, "نجمة ديكور مضيئة"],
+                [/light|string.?light|led|نور|اضاءة|إضاءة/i, "زينة وإضاءة منزلية"],
+                [/runner|رنر/i, "رنر ترابيزة"],
+                [/macrame|مكرمي/i, "مكرمية ديكور"],
+                [/vase|فازة/i, "فازة ديكور"],
+                [/lamp|اباجورة|أباجورة/i, "أباجورة ديكور"],
+                [/tray|صينية/i, "صينية تقديم وديكور"],
+                [/incense|مبخرة|mabkhara/i, "مبخرة ديكور"],
+                [/spoon|ملعقة|ملاعق/i, "ملاعق مطبخ"],
+                [/fork|شوكة|شوك/i, "شوك طعام"],
+                [/knife|سكين|سكاكين/i, "سكاكين مطبخ"],
+                [/whisk|beater|مضرب/i, "مضرب بيض ومشروبات"],
+                [/mug|cup|مج|كوب/i, "مج أو كوب"],
+                [/silicone|silicon|قالب/i, "قالب سيليكون"],
+                [/bowl|طبق|طقم/i, "أدوات تقديم"],
+                [/kitchen|مطبخ/i, "أداة من أدوات المطبخ"]
+              ];
+              const matchedName = nameRules.find(([pattern]) => pattern.test(path));
+              const productName = matchedName
+                ? matchedName[1]
+                : (isRunner ? "رنر من تشكيلة أوسكار ستور" : "قطعة ديكور من تشكيلة أوسكار ستور");
 
               products.push({
                 id: "auto_" + path,
                 page: isRunner ? 6 : 4,
                 category: isRunner ? "رنارات سفرة" : "فوانيس وأنوار",
-                name: cleanName || (isRunner ? "رنر جديد" : "قطعة ديكور جديدة"),
+                name: productName,
                 desc: "من مجموعة أوسكار ستور — للاستفسار عن السعر تواصل مع المحل.",
                 image: safeImage
               });
